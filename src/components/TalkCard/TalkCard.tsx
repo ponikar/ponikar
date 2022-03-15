@@ -1,12 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 
-export const TalkCard = () => {
+interface TalkCardProps {
+  src: string;
+  title?: string;
+}
+export const TalkCard: FC<TalkCardProps> = ({ src, title }) => {
   return (
     <iframe
       className="w-full"
       height="315"
-      src="https://www.youtube.com/embed/XJPQ4al7dZ4"
-      title="YouTube video player"
+      src={src}
+      title={title}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
