@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { SocialIcon } from "../SocialIcon";
+import { SocialLink } from "../SocialLinks/SocialLink";
 import styles from "./hero.module.css";
 export const Hero = () => {
   return (
@@ -19,17 +20,8 @@ export const Hero = () => {
         </p>
       </div>
 
-      <div className="mt-10 flex items-center gap-4">
-        <SocialIcon src="gh.svg" alt="Github Logo" />
-        <SocialIcon src="tw.svg" alt="Twitter Logo" />
-        <SocialIcon src="ld.svg" alt="Linkedin Logo" />
-        <SocialIcon
-          src="dev.png"
-          alt="Dev Community Logo"
-          width={32}
-          height={26}
-        />
-        <SocialIcon src="discord.svg" alt="Discord Logo" />
+      <div className="mt-10">
+        <SocialLink />
       </div>
     </section>
   );

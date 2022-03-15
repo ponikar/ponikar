@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import { Blogs } from "../src/components/Blogs";
+import { Contact } from "../src/components/Contact";
+import { Footer } from "../src/components/Footer";
 import { Header } from "../src/components/Header";
 import { Hero } from "../src/components/Hero";
 import { Projects } from "../src/components/Projects";
@@ -13,6 +15,8 @@ const Home: NextPage = () => {
       <Projects />
       <Blogs />
       <Talks />
+      <Contact />
+      <Footer />
     </div>
   );
 };

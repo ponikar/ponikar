@@ -1,0 +1,8 @@
+.input {
+  box-shadow: 5px 5px 0px #000;
+  @apply p-2 border text-sm border-black;
+}
+
+.input:focus {
+  outline: none;
+}
