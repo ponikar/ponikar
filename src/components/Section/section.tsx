@@ -12,7 +12,7 @@ export const Section: FC<SectionProps> = ({
   contentStyle,
 }) => {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50">
       <section className="container py-12 mx-auto">
         <h4 className="sf text-5xl"> {title} </h4>
         <article style={contentStyle} className={`py-8 ${contentClassName}`}>

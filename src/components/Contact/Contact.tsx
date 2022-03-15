@@ -7,7 +7,7 @@ import { SocialLink } from "../SocialLinks/SocialLink";
 export const Contact = () => {
   return (
     <Section title="">
-      <div className="lg:w-5/12 md:w-10/12 w-11/12 mx-auto p-4 border border-black">
+      <div className="lg:w-5/12 md:w-10/12 w-11/12 mx-auto p-4 border bg-white border-black">
         <h3 className="text-center text-4xl mb-3 sf">Say Hi!</h3>
         <div className="flex flex-col gap-8">
           <Input label="Email" placeholder="jake@b99.com" />
