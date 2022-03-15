@@ -1,0 +1,7 @@
+.content_container {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line, 3);
+  overflow: hidden;
+  @apply text-sm text-gray-500;
+}

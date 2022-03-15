@@ -1,5 +1,5 @@
 .hero_container {
-  height: 95%;
+  height: 100%;
 
   @apply w-full flex-col relative text-center flex justify-center items-center;
 }
