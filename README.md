@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Journey of Full Stack Developer!
 
-## Getting Started
+Hello there, This is darshan ponikar! Welcome to my github profile. I am an undegraduate Computer and Science student and learning a Full stack development!
+I love to code in JavaScript.
 
-First, run the development server:
+![darshan ponikar](https://media.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gifhttps://media.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Say Hi, 👋 <br />
+<a href="https://www.linkedin.com/in/ponikar/"> Linkedin </a> | <a href="https://instagram.com/iponikar"> Instagram </a> | <a href="mailto://itsponikar@gmail.com"> Email </a> | <a href="https://twitter.com/iponikar"> Twiiter </a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where I've came so far?
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+😎 TypeScript <br />
+🤖 JavaScript <br />
+🚀 NodeJs | Express JS <br />
+🚀 React | React Native | Redux | Redux Saga | Next.js <br />
+🔥 PHP Laravel <br />
+🤩 Figma UI desing <br />
+🤓 Firebase | Firestore | Cloud Function <br />
+😛 AWS EC2 | Storage Bucket | Route S3 <br />
+🤡 MySql | MongoDB <br />
+🥧 Ubuntu OS <br />
+and of course **Data Structure and Algorithm**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## My Inventions
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Secret Crush 2020
 
-## Learn More
+A fun app which will tell you if someone in your friend circle is having a crush on you or not! <br />
+Allow you to make private convertations <br />
+Search your Friend/Crush Profile! <br />
+Personalized your Crush List <br />
+Read your chats anywhere, anytime. (Offline Support) <br />
 
-To learn more about Next.js, take a look at the following resources:
+Where is the link? Unfortunately, I need to shutdown the project due to fund issue! Archived the repo!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Shopty.in
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Are you fan of Funky tshirts? Because I am. Shopty.in is E-Commerce store which has the collections of funcky, on-demand cuztomized desing tshirts.
+You can order and make your personal tshirts collection.
 
-## Deploy on Vercel
+Features
+Fast Website rendering with Next.js (SSR/SSG) <br />
+Search <br />
+Save for Later <br />
+Share with friend <br />
+Realtime Order Tracking <br />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Link - https://shopty.in
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Portfolio 1.0
+
+This is my perosnal portfolio in which I will often share my perosnal talks and showcase my personal projects. <br />
+Currently working on this project link will be shared soon.
+
+Also There are servals projects I have worked but Let's save them for other day.
+
+### OpenSource
+
+Currently, There is no OpenSource contribution I have made. :(
+
+So That's it.
+
+Thank you, for spending time on my readme. I hope you have got something meaningful here. Feel free to contact me anytime. I have mention my contact details above.
+
+Have a grate Day,
+Happy Coding.
+
+![ponikar-bye](https://media.giphy.com/media/GB0lKzzxIv1te/giphy.gif)
+
+Last updated 20th June, 00:59 AM.
