@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React from "react";
 import { SocialIcon } from "../SocialIcon";
@@ -6,10 +7,16 @@ import styles from "./hero.module.css";
 export const Hero = () => {
   return (
     <section className={styles.hero_container}>
-      <div className={`${styles.mesh_effect_1} ${styles.mesh_effect}`} />
-      <div className={`${styles.mesh_effect_2} ${styles.mesh_effect}`} />
-      <div className={`${styles.mesh_effect_3} ${styles.mesh_effect}`} />
-
+      <img
+        src="/assets/imgs/mesh_1.svg"
+        alt=""
+        className={`${styles.mesh_effect_1} ${styles.mesh_effect}`}
+      />
+      <img
+        src="/assets/imgs/mesh_2.svg"
+        alt=""
+        className={`${styles.mesh_effect_2} ${styles.mesh_effect}`}
+      />
       <div className={styles.overlay}></div>
       <div>
         <h2 className="sf text-5xl ">The Journey of Full Stack Developer.</h2>

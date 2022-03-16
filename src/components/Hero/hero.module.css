@@ -14,23 +14,12 @@
   @apply fixed;
 }
 .mesh_effect_1 {
-  left: 5%;
-  top: 15%;
-  width: 15%;
-  height: 15%;
-  border-radius: 36% 64% 32% 68% / 30% 30% 70% 70%;
-  background-color: #ff0000;
-  background-image: radial-gradient(
-      at 40% 20%,
-      hsla(28, 100%, 74%, 1) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 50%, hsla(355, 85%, 93%, 1) 0, transparent 50%),
-    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0, transparent 50%),
-    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
+  left: 15%;
+  transform: translateX(-50%);
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  animation: rotate_me 40s infinite ease-in;
 }
 
 @keyframes rotate_me {
@@ -48,38 +37,12 @@
   width: 45%;
   height: 45%;
   border-radius: 94% 6% 100% 0% / 65% 1% 99% 35%;
-  background-image: #ff0000;
-  background-image: radial-gradient(
-      at 40% 20%,
-      hsla(28, 100%, 74%, 1) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 50%, hsla(355, 85%, 93%, 1) 0, transparent 50%),
-    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0, transparent 50%),
-    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
   animation: rotate_me 30s infinite linear;
 }
 
 .mesh_effect_3 {
   bottom: 4%;
-  right: 10%;
+  right: 50%;
   width: 10%;
   height: 25%;
-  background-color: #99f5ff;
-  background-image: radial-gradient(
-      at 6% 63%,
-      hsla(295, 95%, 64%, 1) 0,
-      transparent 58%
-    ),
-    radial-gradient(at 37% 10%, hsla(346, 89%, 64%, 1) 0, transparent 49%),
-    radial-gradient(at 10% 41%, hsla(253, 81%, 62%, 1) 0, transparent 51%),
-    radial-gradient(at 38% 77%, hsla(128, 73%, 73%, 1) 0, transparent 55%),
-    radial-gradient(at 54% 79%, hsla(284, 98%, 65%, 1) 0, transparent 44%),
-    radial-gradient(at 14% 31%, hsla(357, 74%, 75%, 1) 0, transparent 54%),
-    radial-gradient(at 30% 98%, hsla(29, 96%, 77%, 1) 0, transparent 49%);
-
-  border-radius: 36% 64% 51% 49% / 47% 51% 49% 53%;
 }
