@@ -1,10 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { SocialIcon } from "../SocialIcon";
 import { SocialLink } from "../SocialLinks/SocialLink";
 import styles from "./hero.module.css";
 export const Hero = () => {
+  const [acl, setAcl] = useState("Shake your phone");
+  useEffect(() => {
+    alert(window.DeviceMotionEvent);
+    addEventListener(
+      "devicemotion",
+      (e) => {
+        alert("WORKING");
+        setAcl(JSON.stringify({ x: e.acceleration?.x, y: e.acceleration?.y }));
+      },
+      true
+    );
+  }, []);
   return (
     <section className={styles.hero_container}>
       <img
@@ -25,6 +37,7 @@ export const Hero = () => {
           eveniet, ratione eaque, praesentium mollitia dicta nihil quis incidunt
           nesciunt repellat obcaecati.
         </p>
+        {acl}
       </div>
 
       <div className="mt-10">
