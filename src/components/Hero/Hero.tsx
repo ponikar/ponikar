@@ -7,17 +7,12 @@ import styles from "./hero.module.css";
 export const Hero = () => {
   const [acl, setAcl] = useState("Shake your phone");
   useEffect(() => {
-    if (navigator.permissions) {
-      navigator.permissions.query({
-        name: "accelerometer" as any,
+    if (window.DeviceMotionEvent) {
+      window.addEventListener("devicemotion", (e) => {
+        alert("MOVING" + e.acceleration?.x);
       });
-      // @ts-ignore
-      let acl = new Accelerometer({ frequency: 60 });
-      acl.addEventListener("reading", () => {
-        setAcl(`${acl.x}:${acl.y}`);
-      });
-
-      acl.start();
+    } else {
+      alert("DEVICE MOTION IS NOT THERE");
     }
   }, []);
   return (
