@@ -11,6 +11,7 @@ export const Hero = () => {
       navigator.permissions.query({
         name: "accelerometer" as any,
       });
+      // @ts-ignore
       let acl = new Accelerometer({ frequency: 60 });
       acl.addEventListener("reading", () => {
         setAcl(`${acl.x}:${acl.y}`);
