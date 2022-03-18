@@ -9,7 +9,7 @@ export const Hero = () => {
   useEffect(() => {
     if (window.DeviceMotionEvent) {
       window.addEventListener("devicemotion", (e) => {
-        alert("MOVING" + e.acceleration?.x);
+        setAcl(`${e.acceleration?.x}:${e.acceleration?.y}`);
       });
     } else {
       alert("DEVICE MOTION IS NOT THERE");
