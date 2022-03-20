@@ -6,6 +6,12 @@
   font-family: "Shadows Into Light", cursive;
 }
 
+.default_shadow {
+  box-shadow: 5px 5px 0px #000;
+  -webkit-box-shadow: 5px 5px 0px #000;
+  -webkit-appearance: none;
+  @apply border border-black;
+}
 html,
 body,
 #__next {
