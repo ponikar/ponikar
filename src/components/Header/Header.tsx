@@ -8,7 +8,9 @@ export const Header: FC = () => {
       <nav className="container mx-auto w-full flex justify-between items-center h-16">
         <h2 className="sf text-3xl font-bold">Darshan Ponikar</h2>
 
-        <Button>Say Hi! 👋🏻</Button>
+        <Button>
+          Say Hi! <span className={styles.wave_hand}>✋</span>
+        </Button>
       </nav>
     </div>
   );

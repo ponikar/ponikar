@@ -3,3 +3,18 @@
   z-index: 1;
   @apply fixed border-b z-10 w-full top-0 backdrop-blur-2xl;
 }
+
+.wave_hand {
+  display: inline-block;
+  transform-origin: bottom;
+  animation: waving 1s alternate infinite ease-in;
+}
+
+@keyframes waving {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
