@@ -37,6 +37,7 @@ export const ProjectCard: FC<ProjectRes> = ({
           <h3 className="text-3xl font-medium"> {repo} </h3>
           {getIcons[language] && (
             <SocialIcon
+              href="#"
               src={getIcons[language]}
               alt="Github link"
               width={30}

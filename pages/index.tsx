@@ -8,6 +8,7 @@ import { Projects } from "../src/components/Projects";
 import { Talks } from "../src/components/Talks";
 import { BlogRes, ProjectRes } from "../@types/res";
 import { getRequest } from "../src/utils/api";
+import { CaseStudy } from "../src/components/CaseStudy/CaseStudy";
 
 interface HomeProps {
   projects: ProjectRes[];
@@ -20,6 +21,7 @@ const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
       <Header />
       <Hero />
       <Projects projects={projects} />
+      <CaseStudy />
       <Blogs blogs={blogs} />
       <Talks />
       <Contact />
