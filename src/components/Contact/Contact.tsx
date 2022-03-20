@@ -41,7 +41,7 @@ export const Contact = () => {
 
   return (
     <Section title="">
-      <div className="lg:w-5/12 md:w-10/12 w-full mx-auto p-4 border bg-white border-black">
+      <div className="lg:w-5/12 md:w-10/12 w-full mx-auto p-4 border bg-white default_shadow">
         <h3 className="text-center text-4xl mb-3 sf">Say Hi!</h3>
         <form onSubmit={onSubmit} className="flex flex-col gap-8">
           <Input

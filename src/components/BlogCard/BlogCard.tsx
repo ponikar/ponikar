@@ -17,7 +17,7 @@ export const BlogCard: FC<BlogRes> = ({
 }) => {
   return (
     <a
-      className="border rounded p-4"
+      className="default_shadow p-4"
       href={url}
       target="_blank"
       rel="noreferrer"
@@ -29,7 +29,6 @@ export const BlogCard: FC<BlogRes> = ({
           width={1000}
           objectFit="contain"
           height={425}
-          className="rounded-t"
         />
       </div>
       <h3 className="text-2xl mb-2 font-medium"> {title} </h3>

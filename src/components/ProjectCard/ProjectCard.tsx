@@ -19,7 +19,7 @@ export const ProjectCard: FC<ProjectRes> = ({
     <a
       href={link}
       target="_blank"
-      className="border bg-white p-4 rounded"
+      className="default_shadow bg-white p-4 "
       rel="noreferrer"
     >
       <article className="flex flex-col gap-2">
@@ -33,7 +33,7 @@ export const ProjectCard: FC<ProjectRes> = ({
             className="rounded-lg mb-3"
           />
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex -mx-4 px-4 py-2 border-t border-t-black items-center justify-between">
           <h3 className="text-3xl font-medium"> {repo} </h3>
           {getIcons[language] && (
             <SocialIcon
