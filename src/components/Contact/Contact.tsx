@@ -16,7 +16,7 @@ export const Contact = () => {
             placeholder="Anything related to Full Stack Development, Public Speaking, Sitcoms."
             label="Message"
           />
-          <BlockButton>SEND</BlockButton>
+          <BlockButton isLoading={false}>SEND</BlockButton>
         </div>
 
         <div className="flex gap-2  items-center mt-5">
