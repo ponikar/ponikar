@@ -10,7 +10,7 @@ export const Projects: FC<ProjectsProps> = ({ projects = [] }) => {
   return (
     <Section
       contentClassName="grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
-      title="Projects"
+      title="Side Projects"
     >
       {projects.map((project, i) => (
         <ProjectCard key={i} {...project} />
