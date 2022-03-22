@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const targetDir = path.join(
-  "/Users/darshanponikar/projects/WebApp/portfolio/",
+  `${__dirname.split("portfolio")[0]}portfolio/`,
   "src/markdown/casestudy"
 );
 export const getCaseStudyPaths = () => {
@@ -14,3 +14,4 @@ export const getCaseStudyPaths = () => {
 export const readMarkdownFile = (fileName: string) => {
   return fs.readFileSync(`${targetDir}/${fileName}.md`, "utf-8");
 };
+``;

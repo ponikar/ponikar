@@ -23,7 +23,6 @@ export default Post;
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = getCaseStudyPaths();
 
-  console.log("paths", paths);
   return {
     paths: paths.map((slug) => ({
       params: {
@@ -37,7 +36,6 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<any, { slug: string }> = async (
   props
 ) => {
-  // MDX text - can be from a local file, database, anywhere
   const source = readMarkdownFile(props.params.slug || "");
   const mdxSource = await serialize(source);
 
