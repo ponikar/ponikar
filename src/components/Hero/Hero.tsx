@@ -17,11 +17,14 @@ export const Hero = () => {
       />
       <div className={styles.overlay}></div>
       <div>
-        <h2 className="sf text-5xl ">The Journey of Full Stack Developer.</h2>
-        <p className="mt-3 text-sm mx-auto w-8/12">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-          eveniet, ratione eaque, praesentium mollitia dicta nihil quis incidunt
-          nesciunt repellat obcaecati.
+        <h2 className="sf lg:text-5xl text-4xl font-medium w-full mx-auto">
+          The Journey of Full Stack Developer.
+        </h2>
+        <p className="mt-3 md:text-base text-sm mx-auto lg:w-6/12 md:w-9/12 w-11/12">
+          Hi 👋. I am Darshan Ponikar. Working as Full Stack Developer at
+          Geekyants. Currently working with React + JavaScript/TypeScript. I am
+          Passionate about building Products. I explore new things on Weekends.
+          DM me for a quick chat.
         </p>
       </div>
 

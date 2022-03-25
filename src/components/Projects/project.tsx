@@ -1,29 +1,20 @@
-// @ts-nocheck
-import React from "react";
+import React, { FC } from "react";
+import { ProjectRes } from "../../../@types/res";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 import { Section } from "../Section";
 
-export const Projects = () => {
+interface ProjectsProps {
+  projects: ProjectRes[];
+}
+export const Projects: FC<ProjectsProps> = ({ projects = [] }) => {
   return (
     <Section
       contentClassName="grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
-      title="Projects"
+      title="Side Projects"
     >
-      <ProjectCard
-        imgSrc="/assets/imgs/shopty.jpeg"
-        title="Shopty.in"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cupiditate laudantium corporis nemo illo ex quibusdam atque, exercitationem nostrum dolores animi quod dolorem soluta, molestias dolore dolorum distinctio mollitia reiciendis?"
-      />
-      <ProjectCard
-        imgSrc="/assets/imgs/shopty.jpeg"
-        title="Shopty.in"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cupiditate laudantium corporis nemo illo ex quibusdam atque, exercitationem nostrum dolores animi quod dolorem soluta, molestias dolore dolorum distinctio mollitia reiciendis?"
-      />
-      <ProjectCard
-        imgSrc="/assets/imgs/shopty.jpeg"
-        title="Shopty.in"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cupiditate laudantium corporis nemo illo ex quibusdam atque, exercitationem nostrum dolores animi quod dolorem soluta, molestias dolore dolorum distinctio mollitia reiciendis?"
-      />
+      {projects.map((project, i) => (
+        <ProjectCard key={i} {...project} />
+      ))}
     </Section>
   );
 };

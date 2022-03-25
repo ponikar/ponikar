@@ -1,14 +1,19 @@
 import Image, { ImageProps } from "next/image";
-import React from "react";
+import React, { HTMLAttributes } from "react";
 
-export const SocialIcon = (props: ImageProps) => {
+export const SocialIcon = ({
+  href,
+  ...props
+}: ImageProps & { href: string }) => {
   return (
-    <Image
-      height={25}
-      width={25}
-      alt=""
-      {...props}
-      src={`/assets/icons/${props.src}`}
-    />
+    <a href={href}>
+      <Image
+        height={25}
+        width={25}
+        alt=""
+        {...props}
+        src={`/assets/icons/${props.src}`}
+      />
+    </a>
   );
 };
