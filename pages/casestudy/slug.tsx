@@ -1,6 +1,6 @@
 import Image from "next/image";
 // import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
+// import { MDXRemote } from "next-mdx-remote";
 import React from "react";
 import { NextPage } from "next";
 // import { getCaseStudyPaths, readMarkdownFile } from "../../src/utils/markdown";
@@ -29,7 +29,7 @@ const CaseStudy: NextPage<{ source: any }> = ({ source }) => {
           the real world. If you are having any questions or doubts feel free to
           ping me. 😁
         </Alert>
-        <MDXRemote {...source} components={components} />
+        {/* <MDXRemote {...source} components={components} /> */}
       </div>
     </div>
   );
