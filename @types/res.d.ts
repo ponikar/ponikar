@@ -23,3 +23,18 @@ export interface BlogRes {
   reading_time_minutes: number;
   tag_list: string[];
 }
+
+interface CaseStudyType {
+  title: string;
+
+  slug: string;
+
+  description: string;
+
+  cover_image: string;
+
+  icon: string;
+
+  reading_time: string;
+  created_at: string;
+}

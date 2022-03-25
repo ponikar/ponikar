@@ -1,11 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
+import { CaseStudyType } from "../../../@types/res";
 import { CaseStudyCard } from "../CaseStudyCard";
 import { Section } from "../Section";
 
-export const CaseStudy = () => {
+interface CaseStudyProps {
+  casestudies: CaseStudyType[];
+}
+export const CaseStudy: FC<CaseStudyProps> = ({ casestudies }) => {
   return (
     <Section title="Project CaseStudy" contentClassName="grid grid-cols-3">
-      <CaseStudyCard />
+      {casestudies.map((casestudy, index) => (
+        <CaseStudyCard key={index} {...casestudy} />
+      ))}
     </Section>
   );
 };

@@ -6,22 +6,24 @@ import { Header } from "../src/components/Header";
 import { Hero } from "../src/components/Hero";
 import { Projects } from "../src/components/Projects";
 import { Talks } from "../src/components/Talks";
-import { BlogRes, ProjectRes } from "../@types/res";
+import { BlogRes, CaseStudyType, ProjectRes } from "../@types/res";
 import { getRequest } from "../src/utils/api";
-import { CaseStudy } from "../src/components/CaseStudy/CaseStudy";
+// import { CaseStudy } from "../src/components/CaseStudy/CaseStudy";
+// import { getCaseStudyData } from "../src/data/casestudy";
 
 interface HomeProps {
   projects: ProjectRes[];
   blogs: BlogRes[];
+  casestudies: CaseStudyType[];
 }
 
-const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
+const Home: NextPage<HomeProps> = ({ projects, blogs, casestudies }) => {
   return (
     <div className="h-full">
       <Header />
       <Hero />
       <Projects projects={projects} />
-      <CaseStudy />
+      {/* <CaseStudy casestudies={casestudies} /> */}
       <Blogs blogs={blogs} />
       <Talks />
       <Contact />
@@ -38,6 +40,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const blogs = await getRequest<BlogRes[]>(
     "https://dev.to/api/articles?username=ponikar"
   );
+
+  // const casestudies = await getCaseStudyData();
 
   return {
     props: { projects: projects.data, blogs: blogs.data },

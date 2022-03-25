@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading: boolean;
 }
 export const BlockButton: FC<ButtonProps> = ({
