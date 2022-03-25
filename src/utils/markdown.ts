@@ -1,10 +1,11 @@
 import fs from "fs";
 import path from "path";
 
-const targetDir = path.join(
-  `${__dirname.split("portfolio")[0]}portfolio/`,
-  "src/markdown/casestudy"
-);
+const targetDir = path
+  .join
+  // `${__dirname.split("portfolio")[0]}portfolio/`,
+  // "/src/markdown/casestudy"
+  ();
 export const getCaseStudyPaths = () => {
   const files = fs.readdirSync(targetDir);
 
