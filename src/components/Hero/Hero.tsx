@@ -17,7 +17,7 @@ export const Hero = () => {
       />
       <div className={styles.overlay}></div>
       <div>
-        <h2 className="sf lg:text-5xl text-4xl  lg:w-full w-full mx-auto">
+        <h2 className="sf lg:text-5xl text-4xl font-medium w-full mx-auto">
           The Journey of Full Stack Developer.
         </h2>
         <p className="mt-3 md:text-base text-sm mx-auto lg:w-6/12 md:w-9/12 w-11/12">
