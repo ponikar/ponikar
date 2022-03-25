@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { serialize } from "next-mdx-remote/serialize";
+// import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import React from "react";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { getCaseStudyPaths, readMarkdownFile } from "../../src/utils/markdown";
+import { NextPage } from "next";
+// import { getCaseStudyPaths, readMarkdownFile } from "../../src/utils/markdown";
 import { Header } from "../../src/components/Header";
 import { Alert } from "../../src/components/Alert";
 const components = { Heading: () => <h2>Hello world!</h2> };
@@ -37,24 +37,24 @@ const CaseStudy: NextPage<{ source: any }> = ({ source }) => {
 
 export default CaseStudy;
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const paths = getCaseStudyPaths();
+// export const getStaticPaths: GetStaticPaths = () => {
+//   const paths = getCaseStudyPaths();
 
-  return {
-    paths: paths.map((slug) => ({
-      params: {
-        slug,
-      },
-    })),
-    fallback: true, // false   or 'blocking'
-  };
-};
+//   return {
+//     paths: paths.map((slug) => ({
+//       params: {
+//         slug,
+//       },
+//     })),
+//     fallback: true, // false   or 'blocking'
+//   };
+// };
 
-export const getStaticProps: GetStaticProps<any, { slug: string }> = async (
-  props
-) => {
-  const source = props.params?.slug ? readMarkdownFile(props.params.slug) : "";
-  const mdxSource = await serialize(source);
+// export const getStaticProps: GetStaticProps<any, { slug: string }> = async (
+//   props
+// ) => {
+//   const source = props.params?.slug ? readMarkdownFile(props.params.slug) : "";
+//   const mdxSource = await serialize(source);
 
-  return { props: { source: mdxSource } };
-};
+//   return { props: { source: mdxSource } };
+// };
