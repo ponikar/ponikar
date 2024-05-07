@@ -26,10 +26,10 @@ const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
         <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
-          content="Hi 👋. I am Darshan Ponikar. Working as Full Stack Developer at
-          Geekyants. Currently working with React + JavaScript/TypeScript. I am
-          Passionate about building Products. I explore new things on Weekends.
-          DM me for a quick chat."
+          content="Hi 👋. I am Darshan Ponikar, a Senior Software Engineer. I specialize
+          in building Web/Mobile Applications using technologies like
+          React/React Native. I am Passionate about building Products. I explore
+          new things on weekends. DM me for a quick chat."
         />
         <meta
           name="keywords"
@@ -40,11 +40,7 @@ const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
           property="og:title"
           content=" Darshan Ponikar | The Journey of Full Stack Developer. 👨🏻‍💻"
         />
-        <meta property="og:url" content="http://bonfireapp.in" />
-        <meta
-          property="og:image"
-          content="https://www.itsponikar.tech/assets/imgs/cover_image.png"
-        />
+        <meta property="og:image" content="/assets/imgs/cover_image.png" />
         <meta property="og:site_name" content="Darshan Ponikar" />
 
         <meta
@@ -53,16 +49,13 @@ const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
         />
         <meta
           name="twitter:description"
-          content="Hi 👋. I am Darshan Ponikar. Working as Full Stack Developer at
-          Geekyants. Currently working with React + JavaScript/TypeScript. I am
-          Passionate about building Products. I explore new things on Weekends.
-          DM me for a quick chat."
+          content=" Hi 👋. I am Darshan Ponikar, a Senior Software Engineer. I specialize
+          in building Web/Mobile Applications using technologies like
+          React/React Native. I am Passionate about building Products. I explore
+          new things on weekends. DM me for a quick chat."
         />
 
-        <meta
-          name="twitter:image"
-          content="https://www.itsponikar.tech/assets/imgs/cover_image.png"
-        />
+        <meta name="twitter:image" content="/assets/imgs/cover_image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:alt" content="Darshan's Portfolio Preview" />
       </Head>
@@ -81,18 +74,76 @@ const Home: NextPage<HomeProps> = ({ projects, blogs }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = await getRequest<ProjectRes[]>(
-    "https://gh-pinned-repos.egoist.sh/?username=ponikar"
-  );
+  // const projects = await getRequest<ProjectRes[]>(
+  //   "https://gh-pinned-repos.egoist.sh/?username=ponikar"
+  // );
 
   const blogs = await getRequest<BlogRes[]>(
     "https://dev.to/api/articles?username=ponikar"
   );
 
-  // const casestudies = await getCaseStudyData();
-
   return {
-    props: { projects: projects.data, blogs: blogs.data },
+    props: {
+      projects: [
+        {
+          owner: "ponikar",
+          repo: "p2p",
+          link: "https://github.com/ponikar/p2p",
+          description: "P2P meeting web application building in React",
+          image: "https://opengraph.githubassets.com/1/ponikar/p2p",
+          language: "TypeScript",
+          languageColor: "#2b7489",
+          stars: "2",
+          forks: 0,
+        },
+        {
+          owner: "ponikar",
+          repo: "mememe",
+          link: "https://github.com/ponikar/mememe",
+          description: "Web base application let you build message memes.",
+          image: "https://opengraph.githubassets.com/1/ponikar/mememe",
+          language: "TypeScript",
+          languageColor: "#2b7489",
+          stars: "1",
+          forks: 0,
+        },
+        {
+          owner: "ponikar",
+          repo: "basic-express-js",
+          link: "https://github.com/ponikar/basic-express-js",
+          description: "Working with Basic Concept of express js with Mongo DB",
+          image:
+            "https://opengraph.githubassets.com/1/ponikar/basic-express-js",
+          language: "JavaScript",
+          languageColor: "#f1e05a",
+          stars: 0,
+          forks: 0,
+        },
+        {
+          owner: "ponikar",
+          repo: "p2p-server",
+          link: "https://github.com/ponikar/p2p-server",
+          description:
+            "Signaling Server for P2P Client with TypeScript Rocks and MongoDB",
+          image: "https://opengraph.githubassets.com/1/ponikar/p2p-server",
+          language: "TypeScript",
+          languageColor: "#2b7489",
+          stars: 0,
+          forks: 0,
+        },
+        {
+          owner: "ponikar",
+          repo: "ponikar-archive",
+          link: "https://github.com/ponikar/ponikar-archive",
+          image: "https://opengraph.githubassets.com/1/ponikar/ponikar-archive",
+          language: "TypeScript",
+          languageColor: "#2b7489",
+          stars: 0,
+          forks: 0,
+        },
+      ],
+      blogs: blogs.data,
+    },
   };
 };
 
