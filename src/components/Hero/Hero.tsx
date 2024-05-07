@@ -21,10 +21,10 @@ export const Hero = () => {
           The Journey of Full Stack Developer.
         </h2>
         <p className="mt-3 md:text-base text-sm mx-auto lg:w-6/12 md:w-9/12 w-11/12">
-          Hi 👋. I am Darshan Ponikar. Working as Full Stack Developer at
-          Geekyants. Currently working with React + JavaScript/TypeScript. I am
-          Passionate about building Products. I explore new things on Weekends.
-          DM me for a quick chat.
+          Hi 👋. I am Darshan Ponikar, a Senior Software Engineer. I specialize
+          in building Web/Mobile Applications using technologies like
+          React/React Native. I am Passionate about building Products. I explore
+          new things on weekends. DM me for a quick chat.
         </p>
       </div>
 
