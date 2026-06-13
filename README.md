@@ -1,71 +1,60 @@
-# The Journey of Full Stack Developer!
+# Darshan Ponikar — Founding Engineer
 
-Hello there, This is darshan ponikar! Welcome to my github profile. I am an undegraduate Computer and Science student and learning a Full stack development!
-I love to code in JavaScript.
+**Founding Engineer with 4+ years building 0→1 products across VC-backed startups.**
 
-![darshan ponikar](https://media.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gifhttps://media.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif)
+Currently building high-throughput infrastructure at Huddle01. Previously at Nintee (AI-native healthcare) and GeekyAnts.
 
-Say Hi, 👋 <br />
-<a href="https://www.linkedin.com/in/ponikar/"> Linkedin </a> | <a href="https://instagram.com/iponikar"> Instagram </a> | <a href="mailto://itsponikar@gmail.com"> Email </a> | <a href="https://twitter.com/iponikar"> Twiiter </a>
+I ship. I own. I learn fast.
 
-## Where I've came so far?
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&style=flat-square)](https://in.linkedin.com/in/ponikar)
+[![Email](https://img.shields.io/badge/Email-itsponikar%40gmail.com-D14836?logo=gmail&style=flat-square)](mailto:itsponikar@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-ponikar-181717?logo=github&style=flat-square)](https://github.com/ponikar)
 
-😎 TypeScript <br />
-🤖 JavaScript <br />
-🚀 NodeJs | Express JS <br />
-🚀 React | React Native | Redux | Redux Saga | Next.js <br />
-🔥 PHP Laravel <br />
-🤩 Figma UI desing <br />
-🤓 Firebase | Firestore | Cloud Function <br />
-😛 AWS EC2 | Storage Bucket | Route S3 <br />
-🤡 MySql | MongoDB <br />
-🥧 Ubuntu OS <br />
-and of course **Data Structure and Algorithm**
+---
 
-## My Inventions
+## What I've Built
 
-### Secret Crush 2020
+### Huddle01 — Founding Engineer (2024 – Present)
+Building a high-throughput Web3 trading platform designed for low-latency processing of thousands of trades per second. Working across the full stack — infra, APIs, and real-time systems.
 
-A fun app which will tell you if someone in your friend circle is having a crush on you or not! <br />
-Allow you to make private convertations <br />
-Search your Friend/Crush Profile! <br />
-Personalized your Crush List <br />
-Read your chats anywhere, anytime. (Offline Support) <br />
+### Nintee — Founding Engineer (2023 – 2024)
+AI-native healthcare startup. Shipped 3–4 production-grade prototypes across iOS, Android, and Web in 2 months — working in a small team searching for product-market fit. Worked here before AI coding agents were mainstream.
 
-Where is the link? Unfortunately, I need to shutdown the project due to fund issue! Archived the repo!
+### GeekyAnts — Software Engineer (2022 – 2023)
+Full-stack React/React Native work. Built and shipped production mobile and web applications.
 
-### Shopty.in
+---
 
-Are you fan of Funky tshirts? Because I am. Shopty.in is E-Commerce store which has the collections of funcky, on-demand cuztomized desing tshirts.
-You can order and make your personal tshirts collection.
+## Tech Stack
 
-Features
-Fast Website rendering with Next.js (SSR/SSG) <br />
-Search <br />
-Save for Later <br />
-Share with friend <br />
-Realtime Order Tracking <br />
+**Languages:** TypeScript · JavaScript
 
-Link - https://shopty.in
+**Frontend:** React · React Native · Next.js · Redux · Redux Saga
 
-### Portfolio 1.0
+**Backend:** Node.js · Express.js
 
-This is my perosnal portfolio in which I will often share my perosnal talks and showcase my personal projects. <br />
-Currently working on this project link will be shared soon.
+**Cloud:** AWS EC2 · S3 · CloudFront
 
-Also There are servals projects I have worked but Let's save them for other day.
+**Databases:** MySQL · MongoDB · Firebase
 
-### OpenSource
+**Other:** Web3 infrastructure, real-time systems, API design
 
-Currently, There is no OpenSource contribution I have made. :(
+---
 
-So That's it.
+## Side Projects
 
-Thank you, for spending time on my readme. I hope you have got something meaningful here. Feel free to contact me anytime. I have mention my contact details above.
+**Shopty.in** — E-commerce platform for on-demand custom tshirts. Built with Next.js (SSR/SSG), real-time order tracking, search, and payments. Active since 2021.
 
-Have a grate Day,
-Happy Coding.
+---
 
-![ponikar-bye](https://media.giphy.com/media/GB0lKzzxIv1te/giphy.gif)
+## Looking For
 
-Last updated 20th June, 00:59 AM.
+Founding Engineer / Early Engineer roles at AI-native companies (0→1, B2B/B2C).
+
+Focus areas: AI agents, LLM infrastructure, agent orchestration, high-throughput systems.
+
+Open to: Remote (US/EU), early-stage startups, meaningful equity.
+
+---
+
+*Last updated: June 2026*
