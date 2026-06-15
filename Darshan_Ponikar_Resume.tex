@@ -70,6 +70,60 @@
   \href{https://github.com/ponikar}{\underline{github.com/ponikar}}
 \end{center}
 
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Government Engineering College, Dahod}{Dahod, India}
+{B.Tech in Computer Science; CGPA: 8.51}{2019 -- 2022}
+\resumeSubheading
+{K.J Polytechnic, Bharuch}{Bharuch, India}
+{Diploma in Computer Science; CGPA: 8.9}{2016 -- 2019}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Founding Engineer}{2024 -- Present}
+{Web3 Trading Platform}{Remote}
+\resumeItemListStart
+\resumeItem{Designed distributed microservices handling thousands of trades/second with $\sim$10ms round-trip latency --- built async database pipelines, multi-tier caching layers, and ranking workers to surface real-time signals}
+\resumeItem{Built custom ranking algorithms for tokenTrending based on live trading activity --- moved from static ordering to dynamic, data-driven surfacing using ClickHouse queries and Redis caching}
+\resumeItem{Developed multi-tier caching system and background worker pipelines for token lifecycle management, maintenance jobs, and async task orchestration}
+\resumeItem{Shipped V0 from concept to production independently --- chose initial stack (Node.js, TypeScript, Bun), designed data model, and deployed the first version}
+\resumeItemListEnd
+
+\resumeSubheading
+{Founding Engineer}{2024 -- Present}
+{Huddle01}{Remote}
+\resumeItemListStart
+\resumeItem{Led the mobile team building a realtime video platform competing with Zoom-level experiences --- shipped production app, managed a small team, owned execution end-to-end}
+\resumeItem{Supported 600+ participants in a single video room with custom native modules for audio/video source management --- extended React Native capabilities beyond what the framework shipped with}
+\resumeItem{Implemented Picture-in-Picture support and custom Objective-C Metal shader rendering pipelines to achieve performance targets in constrained environments}
+\resumeItem{Reduced crash rate on low-end Android devices to $\sim$0.01\% through systematic profiling, bottleneck identification, and targeted fixes}
+\resumeItemListEnd
+
+\resumeSubheading
+{Founding Engineer}{2023 -- 2024}
+{Nintee}{Remote}
+\resumeItemListStart
+\resumeItem{Shipped 3--4 production-grade prototypes in 2 months --- week-long concept to deployment cycles through tight design/engineering/product collaboration}
+\resumeItem{Built a Gen-UI AI agent capable of generating interactive UIs from prompts using predefined UI blocks and rule-based rendering --- AI interactions felt visual instead of text-heavy, before LLM pipelines became mainstream}
+\resumeItem{Experimented with early RAG-based systems in production --- designed retrieval pipelines and prompt workflows before the tooling matured}
+\resumeItem{Developed reusable UI systems and in-app AI agentic flows from scratch for the Community app --- text-to-action experiences with production performance across iOS, Android, and web}
+\resumeItemListEnd
+
+\resumeSubheading
+{Founding Engineer}{2022 -- 2023}
+{FarHouse}{Remote}
+\resumeItemListStart
+\resumeItem{Built FarHouse mobile app (iOS + Android) from scratch --- reached 50K+ downloads across both platforms, later expanded to web}
+\resumeItem{Developed realtime social spaces for protocol users --- native audio drivers, push notifications, deployment infrastructure, and realtime communication flows}
+\resumeItem{Handled product direction, engineering, release management, and deployment independently --- full ownership across the stack}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
 \section{Projects}
 \resumeSubHeadingListStart
 
@@ -77,15 +131,15 @@
 {\textbf{Gold Fish} $|$ \emph{Python, FFmpeg, Kokoro TTS, Instagram Graph API}}{2024 -- Present}
 \resumeItemListStart
 \resumeItem{Building an autonomous AI agent that manages end-to-end social media distribution for app developers --- generates short-form video content, posts to Instagram via API, pulls performance insights, and refines strategy based on what performs}
-\resumeItem{Designed the video assembly pipeline: overlays TTS audio on brainrot gameplay footage (Subway Surfers, Minecraft Parkour), burns in SRT captions, and outputs MP4s ready to post without manual intervention}
-\resumeItem{Built the feedback loop --- views, likes, comments, shares, saves are pulled via Instagram Insights API and used to score content variants and inform the next generation of hooks}
-\resumeItem{Experimented with hook psychology: split-screen GRA format, unresolved-tension endings, profile visit off-ramps. Iterated on script structure based on per-reel performance data}
+\resumeItem{Designed the video assembly pipeline: overlays TTS audio on brainrot gameplay footage, burns in SRT captions, and outputs MP4s ready to post without manual intervention}
+\resumeItem{Built the feedback loop --- views, likes, comments, shares, saves pulled via Instagram Insights API to score content variants and inform the next generation of hooks}
+\resumeItem{Experimented with hook psychology: split-screen GRA format, unresolved-tension endings, profile visit off-ramps --- iterated on script structure based on per-reel performance data}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{vid-gen-scale} $|$ \emph{Python, Node.js, AI}}{2024 -- Present}
 \resumeItemListStart
-\resumeItem{Autonomous AI agent for indie hackers that posts videos, monitors performance, learns, and refines strategy. Goal: 10K views/video as success metric}
+\resumeItem{Autonomous AI agent for indie hackers that posts videos, monitors performance, learns, and refines strategy --- goal: 10K views/video as success metric}
 \resumeItem{Built end-to-end pipeline: content generation $\to$ video assembly $\to$ API posting $\to$ analytics $\to$ strategy refinement}
 \resumeItemListEnd
 
@@ -105,65 +159,14 @@
 
 \resumeSubHeadingListEnd
 
-\section{Experience}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-  {Founding Engineer}{2024 -- Present}
-  {Huddle01}{Remote}
-  \resumeItemListStart
-  \resumeItem{Built and scaled a real-time video platform using Next.js (App Router and Page Router), balancing SSR, RSC, and client components for real-time use cases}
-  \resumeItem{Identified and fixed hydration mismatches by restructuring component boundaries --- pushed non-interactive UI into server components, reduced unnecessary client-side re-renders}
-  \resumeItem{Reduced bundle size and improved load time through aggressive code splitting, lazy loading heavy modules, and webpack output analysis}
-  \resumeItem{Combined real-time WebRTC with React by isolating frequently updating state outside the React tree --- minimized re-renders during live sessions}
-  \resumeItem{Optimized routing and data fetching to avoid blocking navigation during live sessions using selective SSR and client transitions}
-  \resumeItem{Built UI with Tailwind and CSS Modules optimized for high-frequency update scenarios in live video calls}
-  \resumeItem{Handled WebRTC edge cases: peer reconnection, stream sync, network instability --- improved call reliability under poor conditions}
-  \resumeItem{Led a small team, owned execution end-to-end, and iterated based on direct user feedback}
-  \resumeItemListEnd
-
-\resumeSubheading
-  {Founding Engineer}{2023 -- 2024}
-  {Nintee}{Remote}
-  \resumeItemListStart
-  \resumeItem{Built multiple AI consumer apps from 0 to 1 using Next.js App Router --- owned frontend architecture and backend integrations}
-  \resumeItem{Introduced streaming responses, caching, and request batching to handle inconsistent LLM latency --- went from slow, blocking AI flows to smooth, real-time output}
-  \resumeItem{Designed AI pipelines with RAG and prompt workflows --- handled empty responses, latency spikes, and retry logic so users never saw a broken state}
-  \resumeItem{Improved activation by identifying friction in onboarding and simplifying flows to help users reach first meaningful output faster}
-  \resumeItem{Built reusable UI systems with Tailwind and component abstractions across multiple products}
-  \resumeItem{Took ownership across frontend and backend in a small team --- fast iteration cycles, no handoffs}
-  \resumeItemListEnd
-
-\resumeSubheading
-{Software Engineer}{2021 -- 2023}
-{GeekyAnts}{Remote}
-\resumeItemListStart
-\resumeItem{Built scalable frontend applications using React and TypeScript for production products}
-\resumeItem{Architected frontend systems with focus on performance and maintainability}
-\resumeItem{Delivered multiple products from concept to production}
-\resumeItem{Collaborated in teams with strong focus on code quality and problem solving}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Government Engineering College, Dahod}{Dahod, India}
-{B.Tech in Computer Science; CGPA: 8.51}{2019 -- 2022}
-\resumeSubheading
-{K.J Polytechnic, Bharuch}{Bharuch, India}
-{Diploma in Computer Science; CGPA: 8.9}{2016 -- 2019}
-\resumeSubHeadingListEnd
-
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
 \textbf{Languages}{: JavaScript, TypeScript, Python, Swift, Kotlin, HTML, CSS} \\
 \textbf{Frameworks}{: Next.js, React, React Native, Node.js, Tailwind} \\
-\textbf{Technologies}{: WebRTC, Postgres, AWS, REST APIs, FFmpeg, Kokoro TTS} \\
+\textbf{Technologies}{: WebRTC, Postgres, Redis, ClickHouse, AWS, REST APIs, FFmpeg, Kokoro TTS} \\
 \textbf{Tools}{: Git, Figma, CI/CD, Mixpanel} \\
-\textbf{Other}{: Product Thinking, Leadership, User Research, AI Agent Pipelines}
+\textbf{Other}{: Product Thinking, Leadership, User Research, AI Agent Pipelines, Microservices Architecture}
 }}
 \end{itemize}
 
