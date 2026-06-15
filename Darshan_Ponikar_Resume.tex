@@ -16,9 +16,6 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
-%\renewcommand{\headrulewidth}{0pt}
-%\renewcommand{\footrulewidth}{0pt}
-
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -28,7 +25,6 @@
 \urlstyle{same}
 \raggedbottom
 \raggedright
-%\setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
@@ -55,7 +51,6 @@
   \end{tabular*}\vspace{-7pt}
 }
 
-%\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
@@ -85,41 +80,35 @@
 
 \resumeSubheading
 {Founding Engineer}{2024 -- Present}
-{Web3 Trading Platform}{Remote}
+{Huddle01 (Video Conferencing + Web3 Infrastructure)}{Remote}
 \resumeItemListStart
-\resumeItem{Designed distributed microservices handling thousands of trades/second with $\sim$10ms round-trip latency --- built async database pipelines, multi-tier caching layers, and ranking workers to surface real-time signals}
-\resumeItem{Built custom ranking algorithms for tokenTrending based on live trading activity --- moved from static ordering to dynamic, data-driven surfacing using ClickHouse queries and Redis caching}
-\resumeItem{Developed multi-tier caching system and background worker pipelines for token lifecycle management, maintenance jobs, and async task orchestration}
-\resumeItem{Shipped V0 from concept to production independently --- chose initial stack (Node.js, TypeScript, Bun), designed data model, and deployed the first version}
-\resumeItemListEnd
-
-\resumeSubheading
-{Founding Engineer}{2024 -- Present}
-{Huddle01}{Remote}
-\resumeItemListStart
-\resumeItem{Led the mobile team building a realtime video platform competing with Zoom-level experiences --- shipped production app, managed a small team, owned execution end-to-end}
-\resumeItem{Supported 600+ participants in a single video room with custom native modules for audio/video source management --- extended React Native capabilities beyond what the framework shipped with}
-\resumeItem{Implemented Picture-in-Picture support and custom Objective-C Metal shader rendering pipelines to achieve performance targets in constrained environments}
-\resumeItem{Reduced crash rate on low-end Android devices to $\sim$0.01\% through systematic profiling, bottleneck identification, and targeted fixes}
+\resumeItem{Built the Huddle01 mobile app from scratch as the sole mobile engineer, shipped to production on iOS and Android, and scaled it to support 600+ participants in a single video room}
+\resumeItem{Extended React Native with custom native modules for audio and video source management, pushing the framework beyond its default capabilities to hit performance targets}
+\resumeItem{Implemented Picture-in-Picture support and wrote custom Objective-C Metal shader rendering pipelines for video processing inside the app}
+\resumeItem{Reduced the Android crash rate from an unknown baseline down to 0.01\% by profiling low-end devices systematically, identifying bottlenecks, and shipping targeted fixes}
+\resumeItem{Designed the trading platform backend with distributed microservices handling thousands of trades per second at 10ms round-trip latency, using ClickHouse, Redis, and PostgreSQL}
+\resumeItem{Built custom ranking algorithms for tokenTrending, moving from static ordering to dynamic, data-driven surfacing driven by live trading activity}
+\resumeItem{Developed multi-tier caching layers and background worker pipelines for token lifecycle management, async task orchestration, and maintenance jobs}
+\resumeItem{Led a small mobile team, set the technical direction, owned the roadmap, and made all major product decisions independently}
 \resumeItemListEnd
 
 \resumeSubheading
 {Founding Engineer}{2023 -- 2024}
-{Nintee}{Remote}
+{Nintee (AI-Native Healthcare)}{Remote}
 \resumeItemListStart
-\resumeItem{Shipped 3--4 production-grade prototypes in 2 months --- week-long concept to deployment cycles through tight design/engineering/product collaboration}
-\resumeItem{Built a Gen-UI AI agent capable of generating interactive UIs from prompts using predefined UI blocks and rule-based rendering --- AI interactions felt visual instead of text-heavy, before LLM pipelines became mainstream}
-\resumeItem{Experimented with early RAG-based systems in production --- designed retrieval pipelines and prompt workflows before the tooling matured}
-\resumeItem{Developed reusable UI systems and in-app AI agentic flows from scratch for the Community app --- text-to-action experiences with production performance across iOS, Android, and web}
+\resumeItem{Shipped 3 to 4 production-grade prototypes in 2 months at a pre-PMF AI healthcare startup, taking ideas from rough concept to live deployment within a week per cycle}
+\resumeItem{Built a Gen-UI AI agent that generated interactive UIs from prompts using predefined UI blocks and rule-based rendering, making AI interactions feel visual instead of text-heavy, before LLM tooling was mainstream}
+\resumeItem{Experimented with early RAG-based systems in production, designing retrieval pipelines and prompt workflows from scratch before the tooling had stabilized}
+\resumeItem{Developed the Community mobile app (iOS and Android) with reusable UI systems and in-app AI agentic flows, shipping text-to-action experiences with production performance across platforms}
 \resumeItemListEnd
 
 \resumeSubheading
 {Founding Engineer}{2022 -- 2023}
-{FarHouse}{Remote}
+{FarHouse (Consumer App)}{Remote}
 \resumeItemListStart
-\resumeItem{Built FarHouse mobile app (iOS + Android) from scratch --- reached 50K+ downloads across both platforms, later expanded to web}
-\resumeItem{Developed realtime social spaces for protocol users --- native audio drivers, push notifications, deployment infrastructure, and realtime communication flows}
-\resumeItem{Handled product direction, engineering, release management, and deployment independently --- full ownership across the stack}
+\resumeItem{Built FarHouse mobile app from scratch on iOS and Android, grew it to 50K+ downloads across both stores, and later expanded it to web}
+\resumeItem{Developed realtime social spaces including native audio drivers, push notification infrastructure, and realtime communication flows for protocol users}
+\resumeItem{Owned product direction, engineering, release management, and deployment single-handedly across the entire stack}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -130,31 +119,10 @@
 \resumeProjectHeading
 {\textbf{Gold Fish} $|$ \emph{Python, FFmpeg, Kokoro TTS, Instagram Graph API}}{2024 -- Present}
 \resumeItemListStart
-\resumeItem{Building an autonomous AI agent that manages end-to-end social media distribution for app developers --- generates short-form video content, posts to Instagram via API, pulls performance insights, and refines strategy based on what performs}
-\resumeItem{Designed the video assembly pipeline: overlays TTS audio on brainrot gameplay footage, burns in SRT captions, and outputs MP4s ready to post without manual intervention}
-\resumeItem{Built the feedback loop --- views, likes, comments, shares, saves pulled via Instagram Insights API to score content variants and inform the next generation of hooks}
-\resumeItem{Experimented with hook psychology: split-screen GRA format, unresolved-tension endings, profile visit off-ramps --- iterated on script structure based on per-reel performance data}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{vid-gen-scale} $|$ \emph{Python, Node.js, AI}}{2024 -- Present}
-\resumeItemListStart
-\resumeItem{Autonomous AI agent for indie hackers that posts videos, monitors performance, learns, and refines strategy --- goal: 10K views/video as success metric}
-\resumeItem{Built end-to-end pipeline: content generation $\to$ video assembly $\to$ API posting $\to$ analytics $\to$ strategy refinement}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{AI Chat Fantasy} $|$ \emph{Next.js, Node.js, GPT API}}{2024 -- Present}
-\resumeItemListStart
-\resumeItem{AI-powered storytelling platform with dynamic user-driven narratives}
-\resumeItem{Built performant web experience optimized for engagement}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{Scrolla AI} $|$ \emph{Swift, React Native, AI}}{2024 -- Present}
-\resumeItemListStart
-\resumeItem{AI-powered document reader with instant explanations}
-\resumeItem{Designed to reduce friction in reading workflows}
+\resumeItem{Built an autonomous AI agent that handles end-to-end social media distribution for app developers: generates short-form video, posts to Instagram via API, pulls performance data, and refines content strategy based on what actually performs}
+\resumeItem{Designed a video assembly pipeline that overlays TTS audio on gameplay footage, burns in SRT captions, and outputs finished MP4s ready to post without any manual touch}
+\resumeItem{Constructed a feedback loop using Instagram Insights API to score content variants across views, likes, comments, shares, and saves, then used that data to guide the next generation of hooks}
+\resumeItem{Tested hook psychology extensively with split-screen GRA format, unresolved-tension endings, and profile visit off-ramps, iterating script structure based on per-reel performance data}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
