@@ -31,28 +31,28 @@ renewcommand{\footrulewidth}{0pt}
 setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
- \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
 
 \newcommand{\resumeItem}[1]{
- \item\small{{#1 \vspace{-2pt}}}
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
- \vspace{-2pt}\item
- \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
- \textbf{#1} & #2 \\
- \textit{\small#3} & \textit{\small #4} \\
- \end{tabular*}\vspace{-7pt}
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
- \item
- \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
- \small#1 & #2 \\
- \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -64,10 +64,10 @@ renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \begin{document}
 
 \begin{center}
- \textbf{\Huge \scshape Darshan Ponikar} \\ \vspace{1pt}
- \small +91 76001 37148 $|$ \hrefmailto:itsponikar@gmail.com{\underline{itsponikar@gmail.com}} $|$
- \href{https://linkedin.com/in/ponikar}{\underline{linkedin.com/in/ponikar}} $|$
- \href{https://github.com/ponikar}{\underline{github.com/ponikar}}
+  \textbf{\Huge \scshape Darshan Ponikar} \\ \vspace{1pt}
+  \small +91 76001 37148 $|\href{https://mailto:itsponikar@gmail.com}{\underline{itsponikar@gmail.com}} $|
+  \href{https://linkedin.com/in/ponikar}{\underline{linkedin.com/in/ponikar}} $|$
+  \href{https://github.com/ponikar}{\underline{github.com/ponikar}}
 \end{center}
 
 \section{Projects}
@@ -76,9 +76,9 @@ renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \resumeProjectHeading
 {\textbf{Gold Fish} $|$ \emph{Python, FFmpeg, Kokoro TTS, Instagram Graph API}}{2024 -- Present}
 \resumeItemListStart
-\resumeItem{Building an autonomous AI agent that manages end-to-end social media distribution for app developers — generates short-form video content, posts to Instagram via API, pulls performance insights, and refines strategy based on what performs}
+\resumeItem{Building an autonomous AI agent that manages end-to-end social media distribution for app developers --- generates short-form video content, posts to Instagram via API, pulls performance insights, and refines strategy based on what performs}
 \resumeItem{Designed the video assembly pipeline: overlays TTS audio on brainrot gameplay footage (Subway Surfers, Minecraft Parkour), burns in SRT captions, and outputs MP4s ready to post without manual intervention}
-\resumeItem{Built the feedback loop — views, likes, comments, shares, saves are pulled via Instagram Insights API and used to score content variants and inform the next generation of hooks}
+\resumeItem{Built the feedback loop --- views, likes, comments, shares, saves are pulled via Instagram Insights API and used to score content variants and inform the next generation of hooks}
 \resumeItem{Experimented with hook psychology: split-screen GRA format, unresolved-tension endings, profile visit off-ramps. Iterated on script structure based on per-reel performance data}
 \resumeItemListEnd
 
@@ -109,30 +109,30 @@ renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \resumeSubHeadingListStart
 
 \resumeSubheading
- {Founding Engineer}{2024 -- Present}
- {Huddle01}{Remote}
- \resumeItemListStart
- \resumeItem{Built and scaled a real-time video platform using Next.js (App Router and Page Router), balancing SSR, RSC, and client components for real-time use cases}
- \resumeItem{Identified and fixed hydration mismatches by restructuring component boundaries — pushed non-interactive UI into server components, reduced unnecessary client-side re-renders}
- \resumeItem{Reduced bundle size and improved load time through aggressive code splitting, lazy loading heavy modules, and webpack output analysis}
- \resumeItem{Combined real-time WebRTC with React by isolating frequently updating state outside the React tree — minimized re-renders during live sessions}
- \resumeItem{Optimized routing and data fetching to avoid blocking navigation during live sessions using selective SSR and client transitions}
- \resumeItem{Built UI with Tailwind and CSS Modules optimized for high-frequency update scenarios in live video calls}
- \resumeItem{Handled WebRTC edge cases: peer reconnection, stream sync, network instability — improved call reliability under poor conditions}
- \resumeItem{Led a small team, owned execution end-to-end, and iterated based on direct user feedback}
- \resumeItemListEnd
+  {Founding Engineer}{2024 -- Present}
+  {Huddle01}{Remote}
+  \resumeItemListStart
+  \resumeItem{Built and scaled a real-time video platform using Next.js (App Router and Page Router), balancing SSR, RSC, and client components for real-time use cases}
+  \resumeItem{Identified and fixed hydration mismatches by restructuring component boundaries --- pushed non-interactive UI into server components, reduced unnecessary client-side re-renders}
+  \resumeItem{Reduced bundle size and improved load time through aggressive code splitting, lazy loading heavy modules, and webpack output analysis}
+  \resumeItem{Combined real-time WebRTC with React by isolating frequently updating state outside the React tree --- minimized re-renders during live sessions}
+  \resumeItem{Optimized routing and data fetching to avoid blocking navigation during live sessions using selective SSR and client transitions}
+  \resumeItem{Built UI with Tailwind and CSS Modules optimized for high-frequency update scenarios in live video calls}
+  \resumeItem{Handled WebRTC edge cases: peer reconnection, stream sync, network instability --- improved call reliability under poor conditions}
+  \resumeItem{Led a small team, owned execution end-to-end, and iterated based on direct user feedback}
+  \resumeItemListEnd
 
 \resumeSubheading
- {Founding Engineer}{2023 -- 2024}
- {Nintee}{Remote}
- \resumeItemListStart
- \resumeItem{Built multiple AI consumer apps from 0 to 1 using Next.js App Router — owned frontend architecture and backend integrations}
- \resumeItem{Introduced streaming responses, caching, and request batching to handle inconsistent LLM latency — went from slow, blocking AI flows to smooth, real-time output}
- \resumeItem{Designed AI pipelines with RAG and prompt workflows — handled empty responses, latency spikes, and retry logic so users never saw a broken state}
- \resumeItem{Improved activation by identifying friction in onboarding and simplifying flows to help users reach first meaningful output faster}
- \resumeItem{Built reusable UI systems with Tailwind and component abstractions across multiple products}
- \resumeItem{Took ownership across frontend and backend in a small team — fast iteration cycles, no handoffs}
- \resumeItemListEnd
+  {Founding Engineer}{2023 -- 2024}
+  {Nintee}{Remote}
+  \resumeItemListStart
+  \resumeItem{Built multiple AI consumer apps from 0 to 1 using Next.js App Router --- owned frontend architecture and backend integrations}
+  \resumeItem{Introduced streaming responses, caching, and request batching to handle inconsistent LLM latency --- went from slow, blocking AI flows to smooth, real-time output}
+  \resumeItem{Designed AI pipelines with RAG and prompt workflows --- handled empty responses, latency spikes, and retry logic so users never saw a broken state}
+  \resumeItem{Improved activation by identifying friction in onboarding and simplifying flows to help users reach first meaningful output faster}
+  \resumeItem{Built reusable UI systems with Tailwind and component abstractions across multiple products}
+  \resumeItem{Took ownership across frontend and backend in a small team --- fast iteration cycles, no handoffs}
+  \resumeItemListEnd
 
 \resumeSubheading
 {Software Engineer}{2021 -- 2023}
