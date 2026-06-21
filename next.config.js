@@ -2,11 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "opengraph.githubassets.com",
-      "res.cloudinary.com",
-      "media.dev.to",
-    ],
+    domains: ["covers.openlibrary.org"],
   },
 };
 

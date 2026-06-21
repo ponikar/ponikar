@@ -1,35 +1,27 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
-import { SocialLink } from "../SocialLinks/SocialLink";
-import styles from "./hero.module.css";
-export const Hero = () => {
-  return (
-    <section className={styles.hero_container}>
-      <img
-        src="/assets/imgs/mesh_1.svg"
-        alt=""
-        className={`${styles.mesh_effect_1} ${styles.mesh_effect}`}
-      />
-      <img
-        src="/assets/imgs/mesh_2.svg"
-        alt=""
-        className={`${styles.mesh_effect_2} ${styles.mesh_effect}`}
-      />
-      <div className={styles.overlay}></div>
-      <div>
-        <h2 className="sf lg:text-5xl text-4xl font-medium w-full mx-auto">
-          The Journey of Full Stack Developer.
-        </h2>
-        <p className="mt-3 md:text-base text-sm mx-auto lg:w-6/12 md:w-9/12 w-11/12">
-          Hi 👋. I am Darshan Ponikar, a Senior Software Engineer. I specialize
-          in building Web/Mobile Applications using technologies like
-          React/React Native. I am Passionate about building Products. I explore
-          new things on weekends. DM me for a quick chat.
-        </p>
-      </div>
+import { FC } from "react";
+import styles from "./Hero.module.css";
 
-      <div className="mt-10">
-        <SocialLink />
+export const Hero: FC = () => {
+  return (
+    <section id="hero" className={styles.hero}>
+      <div>
+        <div className={styles.badge}>
+          <span className={styles.badgeDot}></span>
+          Open to new opportunities
+        </div>
+        <h1 className={styles.headline}>
+          I build products<br />
+          <span className={styles.dim}>from scratch.</span><br />
+          Whatever it takes.
+        </h1>
+        <p className={styles.sub}>
+          Mobile, backend, AI. I pick up what the problem needs and figure it out.
+          Currently leading mobile at Huddle01 and shipping my own ideas on the side.
+          Based in Surat, India.
+        </p>
+        <div className={styles.ctaRow}>
+          <a href="#work"><button className={`${styles.btn} ${styles.btnPrimary}`}>See what I&rsquo;ve built</button></a>
+        </div>
       </div>
     </section>
   );

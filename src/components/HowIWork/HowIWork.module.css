@@ -1,0 +1,56 @@
+.section {
+  padding: 7rem 3.5rem;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 3rem;
+}
+
+.label span {
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  background: var(--bg2);
+  padding: 2rem;
+  transition: background 0.15s;
+}
+
+.card:hover { background: var(--bg3); }
+
+.cardTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.cardBody {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

@@ -1,15 +1,11 @@
-import React from "react";
+import { FC } from "react";
+import styles from "./Footer.module.css";
 
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
-    <div className="bg-white border-t">
-      <footer className="px-2 py-4 container sm:flex-row flex-col mx-auto flex sm:justify-between bg-white">
-        <h5 className="sm:text-left text-center">Darshan Ponikar</h5>
-
-        <div className="text-gray-500 sm:text-left text-center">
-          Made this with NextJS. ❤️
-        </div>
-      </footer>
-    </div>
+    <footer className={styles.footer}>
+      <p>&copy; 2026 Darshan Ponikar</p>
+      <p>Built with intention. No templates.</p>
+    </footer>
   );
 };
