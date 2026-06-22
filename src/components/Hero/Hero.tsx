@@ -16,7 +16,7 @@ export const Hero: FC = () => {
         </h1>
         <p className={styles.sub}>
           I build across mobile and infrastructure. WebRTC, Solana indexers, real-time audio.
-          Whatever the problem needs, I ship it. Currently leading mobile at Huddle01.
+          Whatever the problem needs, I ship it. Currently leading full stack at Huddle01.
         </p>
         <div className={styles.ctaRow}>
           <a href="#work"><button className={`${styles.btn} ${styles.btnPrimary}`}>See what I&rsquo;ve built</button></a>
