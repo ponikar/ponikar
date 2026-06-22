@@ -23,7 +23,7 @@ const items = [
 export const HowIWork: FC = () => {
   return (
     <section id="how" className={styles.section}>
-      <p className={styles.label}><span>04</span>How I work</p>
+      <p className={styles.label}><span>05</span>How I work</p>
       <div className={styles.grid}>
         {items.map((item, i) => (
           <div key={i} className={styles.card}>

@@ -4,6 +4,7 @@ import { Navbar } from "../src/components/Navbar/Navbar";
 import { Hero } from "../src/components/Hero/Hero";
 import { Work } from "../src/components/Work/Work";
 import { Writing } from "../src/components/Writing/Writing";
+import { AIWorkflow } from "../src/components/AIWorkflow/AIWorkflow";
 import { About } from "../src/components/About/About";
 import { HowIWork } from "../src/components/HowIWork/HowIWork";
 import { Books } from "../src/components/Books/Books";
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
       <Hero />
       <Work />
       <Writing />
+      <AIWorkflow />
       <About />
       <HowIWork />
       <Books />

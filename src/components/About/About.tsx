@@ -36,7 +36,7 @@ export const About: FC = () => {
 
   return (
     <section id="who" className={styles.section}>
-      <p className={styles.label}><span>03</span>Who I am</p>
+      <p className={styles.label}><span>04</span>Who I am</p>
       <div className={styles.inner}>
         {paragraphs.map((text, i) => (
           <p

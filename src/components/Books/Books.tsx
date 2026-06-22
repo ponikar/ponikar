@@ -14,7 +14,7 @@ const books = [
 export const Books: FC = () => {
   return (
     <section id="books" className={styles.section}>
-      <p className={styles.label}><span>05</span>Books</p>
+      <p className={styles.label}><span>06</span>Books</p>
       <div className={styles.grid}>
         {books.map((book, i) => (
           <div key={i} className={styles.card}>

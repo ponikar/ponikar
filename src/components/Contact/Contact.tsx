@@ -14,7 +14,7 @@ export const Contact: FC = () => {
     <section id="contact" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.left}>
-          <p className={styles.label}><span>06</span>Contact</p>
+          <p className={styles.label}><span>07</span>Contact</p>
           <h2 className={styles.heading}>
             Let&rsquo;s talk.<br />
             <span className={styles.dim}>I don&rsquo;t bite.</span>
