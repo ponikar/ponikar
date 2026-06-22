@@ -88,6 +88,21 @@ const companies: Company[] = [
       },
     ],
   },
+  {
+    name: "Open Source",
+    tagline: "Side projects I ship for fun",
+    url: "https://github.com/ponikar",
+    projects: [
+      {
+        tag: "Android · AI Agents",
+        name: "Phone for AI Agent",
+        desc: "An Android app that gives AI agents access to a real phone. Uses AccessibilityService to tap, swipe, navigate, and read the UI tree — exactly the way a human would. The agent connects via WebSocket and controls the device through a Node.js relay server. No brittle automation frameworks. Just a phone the AI can use.",
+        pills: ["Kotlin", "Android", "AccessibilityService", "WebSocket", "Node.js"],
+        link: "https://github.com/ponikar/phone-for-ai-agent",
+        linkLabel: "github →",
+      },
+    ],
+  },
 ];
 
 export const Work: FC = () => {
