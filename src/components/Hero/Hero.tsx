@@ -15,8 +15,9 @@ export const Hero: FC = () => {
           Whatever it takes.
         </h1>
         <p className={styles.sub}>
-          I build across mobile and infrastructure. WebRTC, Solana indexers, real-time audio.
-          Whatever the problem needs, I ship it. Currently leading full stack at Huddle01.
+          I experiment with AI agents to get more done with less effort.
+          Founding engineer at VC-backed startups, led teams across mobile and infrastructure.
+          Currently leading full stack at Huddle01.
         </p>
         <div className={styles.ctaRow}>
           <a href="#work"><button className={`${styles.btn} ${styles.btnPrimary}`}>See what I&rsquo;ve built</button></a>
