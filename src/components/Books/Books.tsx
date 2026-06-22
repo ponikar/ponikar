@@ -6,7 +6,7 @@ const books = [
   { title: "The Almanack of Naval Ravikant", author: "Eric Jorgenson", note: "Wealth and happiness as systems, not goals. I keep coming back to this one.", color: "#4ADE80", cover: "https://covers.openlibrary.org/b/isbn/9781544514222-M.jpg" },
   { title: "Zero to One", author: "Peter Thiel", note: "The only startup book that changed how I actually think about competition.", color: "#60A5FA", cover: "https://covers.openlibrary.org/b/isbn/9780804139298-M.jpg" },
   { title: "The Hard Thing About Hard Things", author: "Ben Horowitz", note: "No platitudes. Just the actual difficulty of building, written honestly.", color: "#F472B6", cover: "https://covers.openlibrary.org/b/isbn/9780062273208-M.jpg" },
-  { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", note: "Changed how I think about my own decisions, especially under pressure.", color: "#FBBF24", cover: "https://covers.openlibrary.org/b/isbn/9780374533557-M.jpg" },
+  { title: "The Cold Start Problem", author: "Andrew Chen", note: "Network effects are the only moat that matters. This book shows you how to build one.", color: "#FBBF24", cover: "https://covers.openlibrary.org/b/isbn/9780062969743-M.jpg" },
   { title: "The Mom Test", author: "Rob Fitzpatrick", note: "Short, dense, and it fixed how I talk to users. Should be required reading.", color: "#C084FC", cover: "https://covers.openlibrary.org/b/isbn/9781492180746-M.jpg" },
   { title: "Deep Work", author: "Cal Newport", note: "The rooftop cafe runs on this philosophy. Distraction is the real enemy.", color: "#FB923C", cover: "https://covers.openlibrary.org/b/isbn/9781455586691-M.jpg" },
 ];
