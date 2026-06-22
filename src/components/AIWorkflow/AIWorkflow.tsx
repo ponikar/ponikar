@@ -4,7 +4,7 @@ import styles from "./AIWorkflow.module.css";
 const sections = [
   {
     title: "The stack",
-    body: "OpenCode runs everything. Codex sits on the side and tries to break whatever I build — like that friend who points out every flaw in your idea before you start. I've started keeping a CLAUDE.md per project. Not a long one. Just the rules I'd otherwise repeat: stack choices, file conventions, which folders not to touch. The agent reads it before every task. Saves me from saying the same thing ten times.",
+    body: "OpenCode runs everything. Codex sits on the side and tries to break whatever I build. Like that friend who points out every flaw in your idea before you start. I've started keeping a CLAUDE.md per project. Not a long one. Just the rules I'd otherwise repeat: stack choices, file conventions, which folders not to touch. The agent reads it before every task. Saves me from saying the same thing ten times.",
   },
   {
     title: "Context juggling",
@@ -12,7 +12,7 @@ const sections = [
   },
   {
     title: "Shipping loops",
-    body: "Pre-built skills are the biggest time saver. QA run, code review, deploy check, internet research through the browser daemon. Each one is a workflow I used to describe from scratch every time. Now I just call it. A feature that took a full day — code, test, fix, deploy, verify — now fits in one focused session. The agent runs the loops. I decide what ships.",
+    body: "Pre-built skills are the biggest time saver. QA run, code review, deploy check, internet research through the browser daemon. Each one is a workflow I used to describe from scratch every time. Now I just call it. A feature that took a full day now fits in one focused session. Code, test, fix, deploy, verify. The agent runs the loops. I decide what ships.",
   },
 ];
 
