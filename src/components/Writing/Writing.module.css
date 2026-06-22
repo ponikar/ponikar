@@ -31,11 +31,12 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1.25rem 0;
   border-bottom: 0.5px solid var(--border);
   transition: padding-left 0.15s;
-  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .row:first-child { border-top: 0.5px solid var(--border); }
@@ -48,30 +49,9 @@
   flex: 1;
 }
 
-.meta {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.tag {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text3);
-}
-
-.date {
-  font-size: 0.75rem;
-  color: var(--text3);
-  min-width: 80px;
-  text-align: right;
-}
+.row:hover .title { color: var(--accent); }
 
 @media (max-width: 768px) {
   .section { padding: 4rem 1.5rem; }
   .row { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-  .meta { gap: 1rem; }
-  .date { min-width: auto; text-align: left; }
 }

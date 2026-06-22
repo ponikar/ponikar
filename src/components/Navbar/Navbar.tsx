@@ -12,6 +12,7 @@ export const Navbar: FC = () => {
       <div className={styles.logo}>Darshan Ponikar</div>
       <ul className={`${styles.links} ${open ? styles.open : ""}`}>
         <li><a href="#work" onClick={close}>Work</a></li>
+        <li><a href="#writing" onClick={close}>Blog</a></li>
         <li><a href="#who" onClick={close}>About</a></li>
         <li><a href="#books" onClick={close}>Books</a></li>
         <li><a href="#contact" onClick={close}>Contact</a></li>
