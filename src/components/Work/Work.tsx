@@ -13,6 +13,7 @@ type Project = {
 type Company = {
   name: string;
   tagline: string;
+  url: string;
   projects: Project[];
 };
 
@@ -20,6 +21,7 @@ const companies: Company[] = [
   {
     name: "Huddle01",
     tagline: "Decentralized real-time communication",
+    url: "https://huddle01.com",
     projects: [
       {
         tag: "Infrastructure · Real-time",
@@ -50,6 +52,7 @@ const companies: Company[] = [
   {
     name: "Nintee",
     tagline: "AI-native startup, rapid product experimentation",
+    url: "https://nintee.com",
     projects: [
       {
         tag: "Mobile · AI",
@@ -94,7 +97,7 @@ export const Work: FC = () => {
       {companies.map((company) => (
         <div key={company.name} className={styles.companyGroup}>
           <div className={styles.companyHeader}>
-            <p className={styles.companyName}>{company.name}</p>
+            <a href={company.url} target="_blank" rel="noreferrer" className={styles.companyName}>{company.name} ↗</a>
             <p className={styles.companyTagline}>{company.tagline}</p>
           </div>
           <div className={styles.grid}>
