@@ -3,16 +3,16 @@ import styles from "./AIWorkflow.module.css";
 
 const sections = [
   {
-    title: "Interface, not assistant",
-    body: "I don't treat AI agents as assistants. They're part of my operating system. OpenCode is the interface between an idea and shipping code. Codex is the adversarial reviewer — a second pair of eyes that tries to break what I build. Agent.md files hold the ground rules per project: conventions, constraints, non-negotiables. The agents read them before they start. I don't repeat myself.",
+    title: "The stack",
+    body: "OpenCode runs everything. Codex sits on the side and tries to break whatever I build — like that friend who points out every flaw in your idea before you start. I've started keeping a CLAUDE.md per project. Not a long one. Just the rules I'd otherwise repeat: stack choices, file conventions, which folders not to touch. The agent reads it before every task. Saves me from saying the same thing ten times.",
   },
   {
-    title: "Context at scale",
-    body: "Context is the bottleneck. I solve it with git worktrees — parallel agents on independent branches, each with their own focus, all synchronized through a shared CLAUDE.md. Prompts are written like code: specific, structured, with examples. Goal first, then constraints, then the format I expect back. No ambiguity, no room for the agent to guess.",
+    title: "Context juggling",
+    body: "Multiple agents on one project used to break constantly. They'd overwrite each other's work, lose the thread, make conflicting changes. Git worktrees fixed it. Each agent gets its own branch with its own working directory. They share the same CLAUDE.md for ground rules, but never touch the same files at once. Prompts are short. Goal, constraints, output format. If more context is needed, I let the agent ask instead of guessing what it might need.",
   },
   {
-    title: "Playbooks, not prompts",
-    body: "I don't prompt for the same thing twice. Custom and pre-defined skills handle repeatable workflows — code review, QA, deployment, internet research. The browser daemon reads, the agents decide, I review. The loop used to take days. Now it takes one focused session.",
+    title: "Shipping loops",
+    body: "Pre-built skills are the biggest time saver. QA run, code review, deploy check, internet research through the browser daemon. Each one is a workflow I used to describe from scratch every time. Now I just call it. A feature that took a full day — code, test, fix, deploy, verify — now fits in one focused session. The agent runs the loops. I decide what ships.",
   },
 ];
 
