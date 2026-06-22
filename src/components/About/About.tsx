@@ -3,7 +3,7 @@ import styles from "./About.module.css";
 
 const paragraphs = [
   "I'm Darshan. I've been building software since before I knew what a career was. Most of my time goes into experimenting with AI agents and LLMs, but I don't limit myself to one layer of the stack.",
-  "I started at Nintee building AI agents when most people hadn't heard of LangChain. Joined Huddle01 early, built the mobile team from scratch, shipped infrastructure. These days I lead full stack and keep pushing what AI agents can do.",
+  "I started at Nintee building AI agents when most people hadn't heard of LangChain. Then joined Huddle01 early, built the entire mobile app by myself, and watched it grow to tens of thousands of users. These days I lead the mobile team there and quietly ship my own things on the side.",
   "I'm drawn to problems that feel slightly too hard. Not for the difficulty itself, but because that's where the interesting work is. Where you have to actually think, not just execute.",
   "Outside of work I journal, I have a rooftop cafe I disappear to when I need to think, and I read more than I probably talk about.",
 ];
