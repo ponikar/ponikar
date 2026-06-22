@@ -101,6 +101,14 @@ const companies: Company[] = [
         link: "https://github.com/ponikar/phone-for-ai-agent",
         linkLabel: "github →",
       },
+      {
+        tag: "Mobile · On-device LLM",
+        name: "Cactus LLM POC",
+        desc: "A React Native app that runs LLMs entirely on-device using the Cactus library. Tool calling, memory, and RAG — all locally, no server needed. Built with Expo for cross-platform and uses native modules for PDF parsing and on-device inference.",
+        pills: ["Expo", "React Native", "TypeScript", "On-device LLM", "RAG", "Kotlin", "Swift"],
+        link: "https://github.com/ponikar/react-native-cactus-poc",
+        linkLabel: "github →",
+      },
     ],
   },
 ];
