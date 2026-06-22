@@ -2,7 +2,7 @@ import { FC } from "react";
 import styles from "./Contact.module.css";
 
 const links = [
-  { name: "Email", handle: "darshan@ponikar.com", href: "mailto:darshan@ponikar.com" },
+  { name: "Email", handle: "itsponikar@gmail.com", href: "mailto:itsponikar@gmail.com" },
   { name: "Twitter / X", handle: "@ponikar", href: "https://twitter.com/ponikar" },
   { name: "GitHub", handle: "github.com/ponikar", href: "https://github.com/ponikar" },
   { name: "LinkedIn", handle: "linkedin.com/in/ponikar", href: "https://linkedin.com/in/ponikar" },
