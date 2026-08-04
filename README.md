@@ -1,183 +1,53 @@
-# Darshan Ponikar — Founding Engineer
+# Darshan Ponikar
 
-**Founding Engineer building AI agents, real-time systems, mobile infrastructure, and 0→1 products.**
+**Product & Platform Engineer** building and stabilizing products across mobile, realtime systems, and applied AI.
 
-I’ve spent the last 4+ years working inside early-stage startups, usually at the messy stage where the product is unclear, the system is not mature yet, and someone has to figure things out end to end.
+I work best on problems that cross product and engineering boundaries: turning an ambiguous requirement into a shipped experience, finding the bottleneck when production becomes unreliable, and building the platform underneath it when the existing system cannot keep up.
 
-Currently at **Huddle01**, building high-throughput Web3 infrastructure and real-time systems. Previously at **Nintee**, an AI-native healthcare startup, and **GeekyAnts**, where I worked across React, React Native, and full-stack product engineering.
+[Portfolio](https://www.ponikar.com) · [LinkedIn](https://www.linkedin.com/in/ponikar) · [Writing](https://dev.to/ponikar) · [Email](mailto:itsponikar@gmail.com)
 
-I like problems where ownership matters more than job titles.
+## Selected evidence
 
-**I ship. I own. I learn fast.**
+- Led a three-engineer mobile team responsible for Android and iOS delivery of Huddle01 Meet, which reached 100,000+ combined downloads.
+- Migrated a production React Native application to the New Architecture and built native Kotlin and Swift integrations for realtime audio and video experiences.
+- Built a Solana event pipeline processing more than one million events per day, including peaks of approximately 500–600 events per second.
+- Built applied-AI projects spanning deterministic agent evaluation, on-device retrieval, tool use, and agent-controlled mobile workflows.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin\&style=flat-square)](https://in.linkedin.com/in/ponikar)
-[![Email](https://img.shields.io/badge/Email-itsponikar%40gmail.com-D14836?logo=gmail\&style=flat-square)](mailto:itsponikar@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-ponikar-181717?logo=github\&style=flat-square)](https://github.com/ponikar)
+## Selected work
 
----
+### Huddle01 mobile platform
 
-## What I’m Good At
+Led mobile delivery across architecture, performance, reliability, payments, release automation, and production support. Work included React Native New Architecture adoption, custom native modules, Apple in-app purchases, Stripe-backed Android payments, CodePush, and GitHub Actions/Fastlane delivery.
 
-* Building 0→1 products from vague ideas
-* Taking ownership across frontend, backend, mobile, infra, and product
-* React Native, native modules, mobile performance, and real-time UX
-* AI agents, context engineering, tool orchestration, and agent workflows
-* High-throughput event processing, queues, caching, workers, and APIs
-* Moving fast in small teams without needing perfect requirements
-* Learning unfamiliar domains quickly and turning them into shipped products
+### Terminal realtime infrastructure
 
----
+Built a realtime Solana indexer and supporting services using TypeScript, Bun, Go, PostgreSQL, ClickHouse, Redis, and WebSockets. The system normalized pump.fun and PumpSwap activity, protected against duplicate events, supported replay and backfill workflows, and powered frequently refreshed token rankings.
 
-## Work Experience
+### [Audit Reliability Lab](https://github.com/ponikar/elm-eval)
 
-### Huddle01 — Founding Engineer
+An evaluation system for supplier-audit AI agents. It compares model findings with human-verified results using deterministic metrics such as critical recall, precision, citation accuracy, and hallucination rate, then applies regression gates to candidate versions.
 
-**2024 – Present**
+### [Phone for AI Agent](https://github.com/ponikar/phone-for-ai-agent)
 
-Building real-time communication products and high-throughput Web3 infrastructure.
+A native Android control layer that lets an AI agent inspect and operate a real phone over WebSockets using Android AccessibilityService commands such as tap, swipe, type, navigate, and read the UI tree.
 
-At Huddle01, I’ve worked across mobile, native systems, real-time audio/video, and backend infrastructure. I helped build and scale React Native apps with custom native modules, WebRTC flows, audio/video experiences, and performance-sensitive mobile UX.
+## Experience
 
-More recently, I’ve been building a high-throughput trading platform designed for low-latency Solana/Web3 data processing. This includes parsers, background workers, Redis caching, token ranking, APIs, microservices, and systems that process large volumes of real-time blockchain activity.
+- **Huddle01 — Founding Engineer** · Jun 2024–Jul 2026 — Mobile leadership, realtime product engineering, payments, release infrastructure, Solana indexing, and production reliability.
+- **Nintee — Senior Software Engineer I** · Sep 2023–Apr 2024 — Built an initial React Native/Expo product through Android and iOS delivery, established reusable UI foundations, and developed Next.js and early applied-AI prototypes.
+- **GeekyAnts — Software Engineer I** · 2021–Sep 2023 — Shipped production React Native, React, and TypeScript work for fintech and consumer clients.
 
-**Areas:** React Native, Expo, WebRTC, native iOS/Android, Node.js, Bun, Redis, ClickHouse, Postgres, Solana, real-time systems.
+## Engineering focus
 
----
+| Mobile platforms | Product & realtime systems | Applied AI |
+| --- | --- | --- |
+| React Native, Expo, Kotlin, Swift, Objective-C, New Architecture, native modules, releases | TypeScript, Node.js, Bun, Go, PostgreSQL, ClickHouse, Redis, WebSockets, payments | Agent evaluation, tool calling, retrieval, context engineering, on-device models, agent workflows |
 
-### Nintee — Founding Engineer
+## Writing
 
-**2023 – 2024**
+- [Building an AI Agent That Commits and Raises PRs from Your Phone](https://dev.to/ponikar/building-an-ai-agent-that-commits-and-raises-prs-from-your-phone-1n78)
+- [OTA Updates in React Native](https://dev.to/ponikar/ota-updates-in-react-native-1pbo)
+- [React Native is Multi-Threaded](https://dev.to/ponikar/react-native-is-multi-threaded-44aj)
+- [0 to 1: Working in a Startup as a Software Engineer](https://dev.to/ponikar/0-to-1-working-in-a-startup-as-software-engineer-4jlp)
 
-AI-native healthcare startup.
-
-Worked in a small team searching for product-market fit and shipped multiple production-grade prototypes across iOS, Android, and Web. Built early AI-native experiences before AI coding agents became mainstream, including RAG-based flows, agentic product experiments, and a Gen-UI style system that could turn prompts into structured UI using predefined components and rules.
-
-This is where I became deeply interested in AI-native consumer products, especially healthcare, personalization, and products that feel useful beyond a basic chatbot.
-
-**Areas:** React Native, React, AI-native UX, RAG, agentic flows, rapid prototyping, product iteration.
-
----
-
-### GeekyAnts — Software Engineer
-
-**2021 – 2023**
-
-Worked across React, React Native, and full-stack product engineering.
-
-Built and shipped production mobile and web applications for client projects across different domains. This gave me a strong base in product engineering, cross-platform development, frontend architecture, and working with real production constraints.
-
-**Areas:** React, React Native, JavaScript, TypeScript, Redux, Node.js, mobile apps, web apps.
-
----
-
-## Side Projects & Experiments
-
-### Phone for AI Agent
-
-An experimental Android control layer that gives AI agents the ability to operate a real phone through commands like tap, swipe, type, read UI tree, and navigate apps over WebSocket.
-
-Built to explore a simple question:
-
-**What happens when an AI agent can actually use a phone instead of only generating text?**
-
-Repo: https://github.com/ponikar/phone-for-ai-agent
-
----
-
-### GitFix
-
-Developer tooling experiment focused on improving engineering workflows with AI.
-
-Repo: https://github.com/ponikar/gitfix
-Live: https://gitfix.ponikar.com
-
----
-
-### AttentionSpam
-
-An AI distribution agent experiment.
-
-The idea is to help products find distribution by researching communities, generating content, testing channels, learning from results, and reporting what worked.
-
-Live: https://attentionspam.ponikar.com
-
----
-
-### React Native Local Model
-
-Experiment around running local/on-device AI models inside React Native.
-
-Repo: https://github.com/ponikar/react-native-local-model
-
----
-
-### React Native Headphone Detect V2
-
-React Native native library for detecting connected audio devices, including wired headphones and Bluetooth devices, with TypeScript support.
-
-Repo: https://github.com/ponikar/react-native-headphone-detect-v2
-
----
-
-### React Native Turbo / Native Module Experiments
-
-Experiments around React Native new architecture, JSI, Turbo Modules, video, device APIs, and native performance.
-
-Repos:
-
-* https://github.com/ponikar/react-native-turbo-video
-* https://github.com/ponikar/react-native-super-turbo-device-info
-
----
-
-## Tech Stack
-
-**Languages:** TypeScript · JavaScript · Go · Kotlin · Swift · Objective-C basics
-
-**Frontend:** React · React Native · Expo · Next.js · Tailwind · Redux · Zustand · React Query
-
-**Mobile:** React Native New Architecture · Native Modules · JSI · Turbo Modules · Expo Modules · WebRTC · Reanimated · MMKV · NativeWind
-
-**Backend:** Node.js · Bun · Go · Express · Hono · REST APIs · WebSockets · background workers
-
-**AI:** AI agents · context engineering · RAG · tool calling · agent workflows · local model experiments · prompt-to-action systems
-
-**Infra/Data:** Docker · Kubernetes · Redis · ClickHouse · Postgres · MySQL · MongoDB · Firebase · AWS EC2 · S3 · CloudFront · Nginx · PM2
-
-**Web3:** Solana indexing · Helius RPC · token lifecycle tracking · real-time trade processing · high-throughput event pipelines
-
-
----
-
-## What I’m Looking For
-
-I’m looking for **Founding Engineer / Early Engineer** roles at AI-native startups.
-
-The best fit is a small, ambitious team where I can own large parts of the product and system, work close to users, and help turn ambiguous ideas into shipped products.
-
-**Focus areas:**
-
-* AI agents
-* Agent infrastructure
-* Context engineering
-* LLM product systems
-* Developer tools
-* AI-native consumer products
-* High-throughput infrastructure
-* Real-time systems
-
-Open to remote roles, US/EU teams, early-stage startups, and meaningful equity.
-
----
-
-## How I Work
-
-I care about speed, ownership, and useful products.
-
-I’m not attached to one layer of the stack. If the biggest bottleneck is frontend, I’ll fix frontend. If it’s infra, I’ll go into infra. If it’s product clarity, I’ll talk to users. If it’s distribution, I’ll try to understand the market.
-
-I’m a generalist by nature and a specialist when the problem demands it.
-
----
-
-*Last updated: July 2026*
+I am open to conversations about high-ownership product and platform engineering roles.
