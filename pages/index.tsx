@@ -1,316 +1,379 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import type { ReactNode } from "react";
 
-const metrics = [
-  { value: "100K+", label: "downloads across iOS and Android" },
-  { value: "3", label: "engineers on the Huddle01 Meet mobile team" },
-  { value: "1M+", label: "blockchain events processed daily" },
-  { value: "500–600", label: "events per second at production peak" },
+const EMAIL = "itsponikar@gmail.com";
+
+type EntryProps = {
+  logo: string;
+  company: string;
+  href: string;
+  role: string;
+  when: string;
+  place?: string;
+  children: ReactNode;
+};
+
+const Entry = ({ logo, company, href, role, when, place, children }: EntryProps) => (
+  <article className="entry">
+    <div className="meta">
+      <span className="logo">
+        <img src={logo} alt="" width={40} height={40} />
+      </span>
+      <div>
+        <h3>
+          <a href={href} target="_blank" rel="noreferrer">
+            {company}
+          </a>
+        </h3>
+        <p>{role}</p>
+        <p>{when}</p>
+        {place ? <p>{place}</p> : null}
+      </div>
+    </div>
+    <div className="body">{children}</div>
+  </article>
+);
+
+const projects = [
+  {
+    title: "Picknick",
+    when: "Nov 2026",
+    href: "https://github.com/ponikar/picknick.ios",
+    text: "On-device photo search for iOS. It indexes your library with MobileCLIP embeddings, Vision labels and offline place names in one SQLite file, and searches by meaning, like \"dog on a beach\". Nothing leaves the phone.",
+    stack: "Swift, Core ML, MobileCLIP, SQLite",
+  },
+  {
+    title: "Video generation pipeline",
+    when: "Jun to Aug 2026",
+    href: "https://github.com/ponikar/vide-gen-pipeline",
+    text: "An AI agent hands over a JSON file and gets a finished short-form video back: Kokoro voices (cloned or blended), captions or chat bubbles over footage, one FFmpeg pass. A queue-backed server stores it, and an API posts reels to Instagram.",
+    stack: "TypeScript, Kokoro TTS, FFmpeg, Supabase, Postgres",
+  },
+  {
+    title: "Audit Reliability Lab",
+    when: "Jul 2026",
+    href: "https://github.com/ponikar/elm-eval",
+    text: "Can an AI agent be trusted to audit supplier compliance? It grades every finding against human-verified cases with a deterministic matcher, no LLM judge, and blocks agent versions that regress.",
+    stack: "TypeScript, Gemini",
+  },
+  {
+    title: "AI Buyer Watchdog",
+    when: "Sep to Oct 2026",
+    href: "https://github.com/ponikar/hack",
+    text: "Uptime monitoring, but for AI shoppers. Give it a store URL and it replays the journeys AI buyers attempt in a headless browser, then shows the exact step where each one fails.",
+    stack: "TypeScript, Node, Playwright, Postgres, pg-boss",
+  },
+  {
+    title: "Phone for AI Agent",
+    when: "Jun 2026",
+    href: "https://github.com/ponikar/phone-for-ai-agent",
+    text: "Gives an AI agent a real Android phone. An Android app performs taps and swipes through the Accessibility Service, and a Node.js server relays commands over WebSocket. 32 GitHub stars.",
+    stack: "Kotlin, Node.js, WebSocket",
+  },
+  {
+    title: "Tool-calling agent over RAG",
+    when: "Nov 2025",
+    href: "https://github.com/ponikar/rag-pipeline-poc",
+    text: "A small agent that shortlists candidates. It writes its own search query, calls a search tool over PDFs embedded in a vector store, and answers only from what the tool returns.",
+    stack: "Bun, Vercel AI SDK, Gemini, Supabase",
+  },
 ];
 
-const writing = [
+const path = [
   {
-    title: "Building an AI Agent That Commits and Raises PRs from Your Phone",
-    topic: "Applied AI",
-    href: "https://dev.to/ponikar/building-an-ai-agent-that-commits-and-raises-prs-from-your-phone-1n78",
+    word: "Product",
+    when: "2021 to Apr 2024",
+    roles: [
+      { title: "Software Engineer I", company: "GeekyAnts" },
+      { title: "Senior Software Engineer I", company: "Nintee" },
+    ],
+    note: "Built apps for clients, then led mobile from the first codebase at Nintee. I learned to take a design all the way to a launch.",
   },
   {
-    title: "0 to 1: Working in a Startup as a Software Engineer",
-    topic: "Startups",
-    href: "https://dev.to/ponikar/0-to-1-working-in-a-startup-as-software-engineer-4jlp",
+    word: "Founding",
+    when: "Jun 2024 to Jul 2026",
+    roles: [{ title: "Founding Engineer", company: "Huddle01" }],
+    note: "Worked directly with a founder. Led three engineers on Meet, then owned Terminal's infrastructure and indexer.",
   },
   {
-    title: "React Native Is Multi-Threaded",
-    topic: "Mobile",
-    href: "https://dev.to/ponikar/react-native-is-multi-threaded-44aj",
+    word: "Forward",
+    when: "Sep to Oct 2026",
+    roles: [{ title: "Member of Technical Staff", company: "Corgi" }],
+    note: "Sat beside the London sales team and built the CRM they needed. This is the work I want to do full time.",
+    next: true,
   },
 ];
 
-const journey = [
-  {
-    company: "GeekyAnts",
-    period: "2021 — 2023",
-    role: "Software Engineer I",
-    summary: "Shipped React Native, React, and TypeScript applications for fintech and consumer clients.",
-  },
-  {
-    company: "Nintee",
-    period: "2023 — 2024",
-    role: "Senior Software Engineer I",
-    summary: "Built the React Native/Expo/TypeScript flagship app from initial codebase through Android and iOS launch, plus Next.js and RAG/tool-calling prototypes.",
-  },
-  {
-    company: "Huddle01",
-    period: "2024 — 2026",
-    role: "Founding Engineer",
-    summary: "Led a three-engineer React Native team, shipped Kotlin/Swift native modules and Apple/Stripe payments, then built TypeScript/Bun and Go services with a Next.js realtime UI.",
-  },
+const pipeline = [
+  { step: "Chain events", detail: "pump.fun and PumpSwap" },
+  { step: "Parse and enrich", detail: "Bun workers" },
+  { step: "Store and cache", detail: "Postgres, ClickHouse, Redis" },
+  { step: "Rank tokens", detail: "refreshed about every 500 ms" },
+  { step: "Broadcast", detail: "WebSockets to the app" },
 ];
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Darshan Ponikar — Founding, Full-Stack &amp; Applied AI Engineer</title>
+        <title>Darshan Ponikar, forward deployed engineer</title>
         <meta
           name="description"
-          content="Founding and full-stack engineer who led a three-person React Native team behind 100K+ downloads and built TypeScript/Bun and Go services processing 1M+ events daily."
+          content="Forward deployed engineer. I work close to the people who have the problem and build the backend, product and agents to solve it."
         />
-        <meta
-          name="keywords"
-          content="Darshan Ponikar, founding engineer, full-stack engineer, applied AI engineer, product engineer, realtime systems"
-        />
-        <meta property="og:title" content="Darshan Ponikar — From founder conversation to production" />
+        <meta property="og:title" content="Darshan Ponikar, forward deployed engineer" />
         <meta
           property="og:description"
-          content="React Native leadership, TypeScript/Bun and Go microservices, Next.js realtime products, and deterministic agent workflows."
+          content="Where I have worked, what I shipped there, and the backend and agent projects I build on my own."
         />
         <meta property="og:site_name" content="Darshan Ponikar" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ponikar.com" />
         <meta name="twitter:card" content="summary" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ponikar.com" />
         <link rel="icon" href="/favicon.png" />
+        <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </Head>
 
-      <a className={styles.skipLink} href="#main">
-        Skip to content
-      </a>
-
-      <header className={styles.siteHeader}>
-        <a className={styles.logo} href="#top" aria-label="Darshan Ponikar, back to top">
-          DP<span aria-hidden="true">↗</span>
-        </a>
-        <nav className={styles.nav} aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#ai">Applied AI</a>
-          <a href="#about">About</a>
-          <a href="#writing">Writing</a>
-        </nav>
-        <a className={styles.headerCta} href="mailto:itsponikar@gmail.com">
-          Let&apos;s talk <span aria-hidden="true">↗</span>
-        </a>
-      </header>
-
-      <main id="main">
-        <section id="top" className={styles.hero} aria-labelledby="hero-title">
-          <div className={styles.heroTopline}>
-            <p>Founding · Full-stack · Applied AI</p>
-          </div>
-
-          <div className={styles.heroGrid}>
-            <h1 id="hero-title" className={styles.heroTitle}>
-              <span>From founder</span>
-              <span>conversation</span>
-              <span className={styles.heroAccent}>to production.</span>
-            </h1>
-
-            <div className={styles.heroAside}>
-              <p className={styles.heroCopy}>
-                Founding Engineer. Led a 3-person React Native team behind 100K+ downloads; built TypeScript/Bun and Go microservices processing 1M+ events/day; added deterministic replay and cross-review across Codex, OpenCode, and Claude Code.
-              </p>
-              <div className={styles.heroActions}>
-                <a className={styles.primaryAction} href="#work">See selected work <span aria-hidden="true">↓</span></a>
-                <a className={styles.textAction} href="https://www.linkedin.com/in/ponikar" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-              </div>
-              <ol className={styles.operatingLoop} aria-label="How Darshan operates">
-                <li><span>01</span> Understand</li>
-                <li><span>02</span> Build</li>
-                <li><span>03</span> Ship</li>
-                <li><span>04</span> Operate</li>
-              </ol>
-            </div>
-          </div>
-
-          <div className={styles.heroFoot} aria-hidden="true">
-            <span>Scroll for the evidence</span>
-            <span className={styles.scrollLine} />
-          </div>
-        </section>
-
-        <section className={styles.metrics} aria-label="Selected outcomes">
-          {metrics.map((metric) => (
-            <div className={styles.metric} key={metric.value}>
-              <strong>{metric.value}</strong>
-              <span>{metric.label}</span>
-            </div>
-          ))}
-        </section>
-
-        <section id="work" className={styles.work} aria-labelledby="work-title">
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>01 / Selected work</p>
-            <h2 id="work-title">React Native apps, Next.js products, and realtime microservices.</h2>
-            <p>Each case names my role, architecture, production scale, and verified outcome.</p>
-          </div>
-
-          <article className={styles.project}>
-            <div className={styles.projectCopy}>
-              <p className={styles.projectMeta}>Huddle01 Meet · Founding Engineer · 2024—2026</p>
-              <h3>Led React Native delivery across Android and iOS.</h3>
-              <p className={styles.projectLead}>Worked directly with a founder and led three engineers across React Native New Architecture, Kotlin/Swift native modules, Apple and Stripe payments, store releases, and production incidents.</p>
-              <dl className={styles.projectFacts}>
-                <div><dt>Reach</dt><dd>100,000+ combined Android and iOS downloads</dd></div>
-                <div><dt>Leadership</dt><dd>Task breakdown, PR review, mentoring, App Store/Play Store releases, and incident response</dd></div>
-                <div><dt>Architecture</dt><dd>React Native New Architecture; Kotlin/Swift modules; Apple IAP + Stripe; receipt validation and idempotent webhooks</dd></div>
-              </dl>
-            </div>
-            <div className={`${styles.projectVisual} ${styles.meetVisual}`} aria-label="Abstract Huddle01 Meet interface">
-              <div className={styles.visualLabel}><span>H01 / MEET</span><span>Release 100K+</span></div>
-              <div className={styles.meetingFrame}>
-                <div className={styles.meetingTop}><span /><span>Weekly product room</span><span>•••</span></div>
-                <div className={styles.participantGrid}>
-                  {["DP", "AK", "RM", "NS", "SJ", "+94"].map((name, index) => (
-                    <div key={name} className={index === 0 ? styles.participantActive : undefined}>
-                      <span>{name}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className={styles.meetingControls}><span>●</span><span>⌁</span><span>↗</span><span className={styles.endCall}>×</span></div>
-              </div>
-              <div className={styles.visualNote}>React Native New Architecture across Android and iOS.</div>
-            </div>
-          </article>
-
-          <article className={`${styles.project} ${styles.projectReverse}`}>
-            <div className={styles.projectCopy}>
-              <p className={styles.projectMeta}>Terminal · TypeScript/Go microservices · Next.js</p>
-              <h3>Rebuilt the path from blockchain event to browser.</h3>
-              <p className={styles.projectLead}>Owned the TypeScript/Bun indexer path and split parsing, persistence, token ranking, and WebSocket broadcasting into independently scalable microservices and workers.</p>
-              <dl className={styles.projectFacts}>
-                <div><dt>Throughput</dt><dd>1M+ events daily; 500–600 events/second at peak</dd></div>
-                <div><dt>Product speed</dt><dd>Critical data readiness improved from ~15s to ~200ms</dd></div>
-                <div><dt>Reliability</dt><dd>Helped maintain ~99% availability with heartbeats, Axiom logs, Slack/phone alerts, replay, and backfill</dd></div>
-                <div><dt>Architecture</dt><dd>TypeScript, Bun workers, Go services, Next.js, PostgreSQL, ClickHouse, Redis, and WebSockets</dd></div>
-              </dl>
-            </div>
-            <div className={`${styles.projectVisual} ${styles.terminalVisual}`} aria-label="Terminal event-processing system diagram">
-              <div className={styles.visualLabel}><span>TERMINAL / LIVE</span><span className={styles.liveSignal}>Pipeline healthy</span></div>
-              <div className={styles.pipeline}>
-                <div className={styles.pipelineSource}><span className={styles.pipelineStageTitle}><span className={styles.pulseDot} />Solana events</span></div>
-                <span className={styles.pipelineArrow}>→</span>
-                <div><span className={styles.pipelineStageTitle}>Parse</span><small>Bun workers</small></div>
-                <span className={styles.pipelineArrow}>→</span>
-                <div><span className={styles.pipelineStageTitle}>Store</span><small>PG / ClickHouse</small></div>
-                <span className={styles.pipelineArrow}>→</span>
-                <div><span className={styles.pipelineStageTitle}>Broadcast</span><small>WebSockets</small></div>
-              </div>
-              <div className={styles.terminalStats}>
-                <div><span>EVENTS / DAY</span><strong>1,000,000+</strong></div>
-                <div><span>PEAK / SEC</span><strong>500—600</strong></div>
-                <div><span>CRITICAL DATA</span><strong>~200 ms</strong></div>
-              </div>
-              <div className={styles.eventStream} aria-hidden="true">
-                {["TX 8fA2 · parsed", "TX 2c19 · stored", "TX 11b7 · broadcast", "TX 90d4 · ranked"].map((event) => <span key={event}>{event}</span>)}
-              </div>
-            </div>
-          </article>
-
-          <article className={styles.project}>
-            <div className={styles.projectCopy}>
-              <p className={styles.projectMeta}>Nintee · React Native/Expo + Next.js · 2023—2024</p>
-              <h3>Shipped a React Native/Expo app from initial repo to both app stores.</h3>
-              <p className={styles.projectLead}>Worked directly with a founder, established the React Native/Expo/TypeScript codebase and reusable UI primitives, and shipped the flagship app through Android and iOS release.</p>
-              <dl className={styles.projectFacts}>
-                <div><dt>Mobile</dt><dd>React Native, Expo, TypeScript, reusable component primitives, Android, and iOS</dd></div>
-                <div><dt>Web</dt><dd>Next.js prototypes used for rapid product-direction validation</dd></div>
-                <div><dt>Applied AI</dt><dd>LangChain/LangGraph concepts, vector retrieval, RAG context construction, and tool-calling prototypes</dd></div>
-              </dl>
-            </div>
-            <div className={`${styles.projectVisual} ${styles.ninteeVisual}`} aria-label="Nintee zero-to-one product layers">
-              <div className={styles.visualLabel}><span>NINTEE / 0→1</span><span>Android + iOS</span></div>
-              <div className={styles.buildStack}>
-                <div><span>04</span><strong>Ship</strong><small>Android + iOS</small></div>
-                <div><span>03</span><strong>React Native</strong><small>Expo + TypeScript</small></div>
-                <div><span>02</span><strong>UI primitives</strong><small>Reusable components</small></div>
-                <div><span>01</span><strong>Foundation</strong><small>Initial codebase</small></div>
-              </div>
-              <div className={styles.prototypeFlag}>AI work shown as product-direction prototypes</div>
-            </div>
-          </article>
-        </section>
-
-        <section id="ai" className={styles.aiSection} aria-labelledby="ai-title">
-          <div className={styles.aiIntro}>
-            <p className={styles.eyebrow}>02 / Applied AI</p>
-            <h2 id="ai-title">Agent workflows with explicit validation.</h2>
-            <p>Repository skills, persistent task records, deterministic replay, and cross-agent review across Codex, OpenCode, and Claude Code.</p>
-          </div>
-
-          <div className={styles.aiIndex}>
-            <div className={styles.aiItem}>
-              <span className={styles.aiNumber}>01</span>
-              <div><h3>Indexer engineering workflow</h3><p>Packaged Terminal architecture, service boundaries, debugging procedures, and validation rules into repository-level skills shared across Codex, OpenCode, and Claude Code.</p></div>
-              <span className={styles.aiTag}>Two-engineer backend</span>
-            </div>
-            <a className={styles.aiItem} href="https://github.com/ponikar/elm-eval" target="_blank" rel="noreferrer">
-              <span className={styles.aiNumber}>02</span>
-              <div><h3>Audit Reliability Lab</h3><p>Human-verified cases with deterministic recall, precision, citation metrics, traces, regressions, and quality gates.</p></div>
-              <span className={styles.aiTag}>Evaluation ↗</span>
-            </a>
-            <a className={styles.aiItem} href="https://github.com/ponikar/phone-for-ai-agent" target="_blank" rel="noreferrer">
-              <span className={styles.aiNumber}>03</span>
-              <div><h3>Phone for AI Agent</h3><p>A constrained WebSocket protocol that lets an agent inspect and operate a real Android device through AccessibilityService.</p></div>
-              <span className={styles.aiTag}>Tool use ↗</span>
-            </a>
-          </div>
-
-          <div className={styles.labLinks}>
-            <span>More from the lab</span>
-            <a href="https://github.com/ponikar/react-native-cactus-poc" target="_blank" rel="noreferrer">On-device RAG ↗</a>
-            <a href="https://github.com/ponikar/gitfix" target="_blank" rel="noreferrer">GitFix ↗</a>
-            <a href="https://github.com/ponikar" target="_blank" rel="noreferrer">GitHub ↗</a>
-          </div>
-        </section>
-
-        <section id="about" className={styles.about} aria-labelledby="about-title">
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>03 / About</p>
-            <h2 id="about-title">From React Native apps to TypeScript/Go microservices.</h2>
-            <p>Five years across TypeScript, React Native, Next.js, Bun, Go, PostgreSQL, ClickHouse, Redis, WebSockets, and agent workflows.</p>
-          </div>
-
-          <div className={styles.timeline}>
-            {journey.map((item, index) => (
-              <article className={styles.timelineItem} key={item.company}>
-                <span className={styles.timelineNumber}>0{index + 1}</span>
-                <div className={styles.timelineCompany}><h3>{item.company}</h3><span>{item.period}</span></div>
-                <div className={styles.timelineStory}><strong>{item.role}</strong><p>{item.summary}</p></div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="writing" className={styles.writing} aria-labelledby="writing-title">
-          <div className={styles.writingIntro}>
-            <p className={styles.eyebrow}>04 / Field notes</p>
-            <h2 id="writing-title">I write after I build.</h2>
-          </div>
-          <div className={styles.writingList}>
-            {writing.map((post, index) => (
-              <a key={post.href} href={post.href} target="_blank" rel="noreferrer">
-                <span className={styles.writingNumber}>0{index + 1}</span>
-                <h3>{post.title}</h3>
-                <span className={styles.writingTopic}>{post.topic}</span>
-                <span className={styles.writingArrow} aria-hidden="true">↗</span>
+      <main>
+        <header className="hero">
+          <h1>Darshan Ponikar</h1>
+          <p className="lede">
+            I started out building products, became a founding engineer, and now work as a forward deployed engineer. I
+            work close to the people who have the problem, figure out what they need, and build the backend, product
+            and agents to solve it.
+          </p>
+          <p className="sub">
+            Five years, mostly at venture-backed startups, across mobile, web and backend.
+          </p>
+          <ul className="contact">
+            <li>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            </li>
+            <li>
+              <a href="https://github.com/ponikar" target="_blank" rel="noreferrer">
+                github.com/ponikar
               </a>
-            ))}
-          </div>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ponikar" target="_blank" rel="noreferrer">
+                linkedin.com/in/ponikar
+              </a>
+            </li>
+          </ul>
+        </header>
+
+        <section id="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title">Experience</h2>
+          <p className="section-intro">
+            Newest first. The pattern repeats: find the person with the problem, build something they actually use.
+          </p>
+
+          <Entry
+            logo="/logos/corgi.svg"
+            company="Corgi"
+            href="https://www.corgi.insure"
+            role="Member of Technical Staff"
+            when="Sep to Oct 2026"
+            place="London, YC S24"
+          >
+            <h4>Two months as a forward deployed engineer, in the London office.</h4>
+            <p className="story">
+              Corgi sells insurance to startups, and its sales teams each ran their own CRM. Several teams would work
+              the same broker, every one claimed the deal at close, and credit and commission got settled by argument. I
+              sat next to the sales reps, talked to them every day, and worked out with them and the London engineers how
+              ownership should be decided.
+            </p>
+            <ul className="points">
+              <li>
+                Led the build of one shared, AI-enabled CRM that records every call, email and meeting from every team,
+                so ownership is visible while the deal is still open. <strong>20+ sales teams, 200+ people</strong> use it.
+              </li>
+              <li>
+                AI agents on Claude and OpenAI read each interaction, match it to the right broker, client and deal, and
+                work out attribution. <strong>2,000+ emails a day</strong>, tuned for cost and latency with batching,
+                caching and cheaper-model routing.
+              </li>
+              <li>
+                Merged <strong>four HubSpot portals</strong> into one workspace and removed{" "}
+                <strong>12,000+ duplicate records</strong>.
+              </li>
+              <li>
+                Access is enforced on the server, and ownership history can&apos;t be deleted because a database
+                trigger blocks it.
+              </li>
+            </ul>
+          </Entry>
+
+          <Entry
+            logo="/logos/huddle01.png"
+            company="Huddle01"
+            href="https://huddle01.com"
+            role="Founding Engineer"
+            when="Jun 2024 to Jul 2026"
+            place="Worked directly with a founder"
+          >
+            <div className="part">
+              <h4>Huddle01 Meet, full stack</h4>
+              <p className="story">
+                Huddle01 is a WebRTC video conferencing app for the web3 community. I started on the mobile app and
+                ended up leading three engineers, while staying hands-on across web, backend and payments. I sat in user
+                interviews and shipped what users asked for.
+              </p>
+              <ul className="points">
+                <li>
+                  Led a team of three: broke down the work, reviewed PRs, ran releases and handled incidents. Meet
+                  reached <strong>100,000+ downloads</strong> across Android and iOS.
+                </li>
+                <li>
+                  Cut Android app boot time from about <strong>30 seconds to about 200 ms</strong>, so people reach a
+                  live meeting faster.
+                </li>
+                <li>
+                  Fixed production crashes and took crash-free sessions from roughly <strong>60 to 70% up to about
+                  99.99%</strong>.
+                </li>
+                <li>
+                  Built payments end to end: Apple in-app purchases on iOS and Stripe on Android, with webhooks, receipt
+                  validation, idempotency and retry handling.
+                </li>
+                <li>
+                  Migrated the app to React Native&apos;s New Architecture, wrote native modules in Kotlin and Swift for
+                  audio, and maintained the React RTC SDK.
+                </li>
+              </ul>
+            </div>
+
+            <div className="part">
+              <h4>Terminal, backend and infrastructure</h4>
+              <p className="story">
+                Terminal is a realtime Solana trading and token-discovery product. New tokens appear faster than anyone
+                can read them, so the job was to surface the ones with live momentum and show trades with almost no
+                delay. I owned the infrastructure and the indexer behind it. We were two backend engineers and built it
+                in under three months by leaning hard on AI agents.
+              </p>
+              <ol className="flow" aria-label="How a Terminal event moves through the system">
+                {pipeline.map((item) => (
+                  <li key={item.step}>
+                    <b>{item.step}</b>
+                    <span>{item.detail}</span>
+                  </li>
+                ))}
+              </ol>
+              <ul className="points">
+                <li>
+                  <strong>1M+ events a day</strong>, with peaks around <strong>500 to 600 events a second</strong>.
+                </li>
+                <li>
+                  Replaced a monolithic event server that couldn&apos;t keep up and failed as one unit with independent
+                  services and Bun workers, so database writes, broadcasts and ranking stopped blocking ingestion.
+                </li>
+                <li>
+                  Parsing and enrichment stay under <strong>7 ms at p95</strong>. Token ranking finishes under about{" "}
+                  <strong>400 ms at p95</strong>.
+                </li>
+                <li>
+                  Idempotent processing, duplicate protection, replay and backfill, heartbeats and alerts. About{" "}
+                  <strong>99% uptime</strong>, and incidents recovered in roughly 30 to 45 minutes.
+                </li>
+                <li>
+                  Packaged the architecture, debugging playbooks and replay scripts as repo-level skills, so Codex,
+                  OpenCode and Claude Code could pick up each other&apos;s work.
+                </li>
+              </ul>
+            </div>
+          </Entry>
+
+          <Entry
+            logo="/logos/nintee.png"
+            company="Nintee"
+            href="https://nintee.com"
+            role="Senior Software Engineer I"
+            when="Sep 2023 to Apr 2024"
+            place="One of the first three engineers"
+          >
+            <p className="story">
+              Nintee was an AI app for building better habits and wellbeing. I led mobile and worked directly with a
+              founder, from the first codebase to the Android and iOS launch.
+            </p>
+            <ul className="points">
+              <li>Built the React Native and Expo app, plus its design system, from Figma designs.</li>
+              <li>Shipped chat and feeds on Stream, and prototyped early agent features: RAG, tool calling and generative UI.</li>
+              <li>
+                Delivered <strong>3 to 4 working prototypes in two months</strong> so the team could test directions
+                before committing.
+              </li>
+            </ul>
+          </Entry>
+
+          <Entry
+            logo="/logos/geekyants.png"
+            company="GeekyAnts"
+            href="https://www.geekyants.com"
+            role="Software Engineer I"
+            when="2021 to Sep 2023"
+          >
+            <p className="story">
+              Where I learned to ship for someone else. I built React Native, React and TypeScript apps for fintech and
+              consumer clients, working directly with each client on what they needed.
+            </p>
+          </Entry>
         </section>
 
-        <section className={styles.contact} aria-labelledby="contact-title">
-          <p className={styles.eyebrow}>05 / Next</p>
-          <h2 id="contact-title">Building a full-stack or applied AI product?</h2>
-          <p>I&apos;m interested in small teams that need one engineer across Next.js/React Native interfaces, TypeScript/Go services, PostgreSQL/Redis, releases, and production incidents.</p>
-          <a href="mailto:itsponikar@gmail.com">Tell me what you&apos;re building <span aria-hidden="true">↗</span></a>
+        <section id="path" aria-labelledby="path-title">
+          <h2 id="path-title">Product, founding, forward</h2>
+          <p className="section-intro">
+            Every step put me closer to the people who have the problem. Forward deployed is where that line leads.
+          </p>
+          <ol className="path">
+            {path.map((step) => (
+              <li key={step.word} className={step.next ? "path-next" : undefined}>
+                <h3 className="path-word">{step.word}</h3>
+                <p className="path-when">{step.when}</p>
+                <ul className="path-roles">
+                  {step.roles.map((role) => (
+                    <li key={role.title}>
+                      <b>{role.title}</b>, {role.company}
+                    </li>
+                  ))}
+                </ul>
+                <p className="path-note">{step.note}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-title">
+          <h2 id="projects-title">Projects</h2>
+          <p className="section-intro">Built on my own, mostly backend and agents. All of them are on GitHub.</p>
+
+          <ul className="projects">
+            {projects.map((project) => (
+              <li key={project.href}>
+                <div className="project-head">
+                  <h3>
+                    <a href={project.href} target="_blank" rel="noreferrer">
+                      {project.title}
+                    </a>
+                  </h3>
+                  <p>{project.when}</p>
+                </div>
+                <div>
+                  <p className="project-text">{project.text}</p>
+                  <p className="stack">{project.stack}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <p>© 2026 Darshan Ponikar</p>
-        <div><a href="https://github.com/ponikar" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/ponikar" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:itsponikar@gmail.com">Email</a></div>
-        <a href="#top">Back to top ↑</a>
+      <footer>
+        <span>© 2026 Darshan Ponikar</span>
+        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
       </footer>
     </>
   );
