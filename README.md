@@ -1,18 +1,38 @@
 # Darshan Ponikar
 
-**Senior Full-Stack & Applied AI Engineer** with 5+ years of experience designing, shipping, and operating products across backend infrastructure, web, mobile, and agentic systems.
+I started out building products, became a founding engineer, and now work as a forward deployed engineer. I work close to the people who have the problem, figure out what they need, and build the backend, product and agents to solve it.
 
-My deepest work is in backend and realtime architecture: event pipelines, service boundaries, databases, caching, WebSockets, reliability, and the product surfaces built on top of them. I have also built agentic applications and engineering systems where retrieval, tool use, evaluation, context, and validation matter more than attaching a chatbot to a product.
+Five years, mostly at venture-backed startups, across mobile, web and backend.
 
 [Portfolio](https://www.ponikar.com) · [LinkedIn](https://www.linkedin.com/in/ponikar) · [Writing](https://dev.to/ponikar) · [Email](mailto:itsponikar@gmail.com)
 
-## Engineering ownership
+## What I've been building lately
 
-I take responsibility beyond implementation: translating product problems into technical plans, defining system boundaries, breaking work into deliverable tasks, coordinating engineers, reviewing pull requests, mentoring teammates, handling production incidents, and working directly with product, design, backend teams, and users. At Huddle01, I led a three-engineer mobile team while remaining hands-on across backend, web, payments, infrastructure, and releases.
+Side projects from the last few months, mostly backend and agents:
 
-## Full-stack systems — Terminal
+- **[Picknick](https://github.com/ponikar/picknick.ios)** (Nov 2026) · On-device photo search for iOS. It indexes your library with MobileCLIP embeddings, Vision labels and offline place names in one SQLite file, and searches by meaning, like "dog on a beach". Nothing leaves the phone. *Swift, Core ML, MobileCLIP, SQLite*
+- **[Video generation pipeline](https://github.com/ponikar/vide-gen-pipeline)** (Jun to Aug 2026) · An AI agent hands over a JSON file and gets a finished short-form video back: Kokoro voices (cloned or blended), captions or chat bubbles over footage, one FFmpeg pass. A queue-backed server stores it, and an API posts reels to Instagram. *TypeScript, Kokoro TTS, FFmpeg, Supabase, Postgres*
+- **[AI Buyer Watchdog](https://github.com/ponikar/hack)** (Sep to Oct 2026) · Uptime monitoring, but for AI shoppers. Give it a store URL and it replays the journeys AI buyers attempt in a headless browser, then shows the exact step where each one fails. *TypeScript, Node, Playwright, Postgres, pg-boss*
+- **[Audit Reliability Lab](https://github.com/ponikar/elm-eval)** (Jul 2026) · Can an AI agent be trusted to audit supplier compliance? It grades every finding against human-verified cases with a deterministic matcher, no LLM judge, and blocks agent versions that regress. *TypeScript, Gemini*
+- **[Phone for AI Agent](https://github.com/ponikar/phone-for-ai-agent)** (Jun 2026) · Gives an AI agent a real Android phone. An Android app performs taps and swipes through the Accessibility Service, and a Node.js server relays commands over WebSocket. *Kotlin, Node.js, WebSocket*
+- **[Tool-calling agent over RAG](https://github.com/ponikar/rag-pipeline-poc)** (Nov 2025) · A small agent that shortlists candidates. It writes its own search query, calls a search tool over PDFs embedded in a vector store, and answers only from what the tool returns. *Bun, Vercel AI SDK, Gemini, Supabase*
 
-At Huddle01, I worked across the backend and frontend of **Terminal**, a realtime Solana trading and token-discovery product. I directly owned the indexer path that captured blockchain events, parsed transactions, calculated derived market values, persisted operational and analytical data, and delivered final updates over WebSockets. Broader product and infrastructure decisions were co-led with the team.
+Earlier experiments: [React Native Cactus POC](https://github.com/ponikar/react-native-cactus-poc) (on-device inference, local retrieval, tool calls) and [GitFix](https://github.com/ponikar/gitfix) (a mobile GitHub workflow that generates reviewed multi-file changes and raises pull requests).
+
+## Work
+
+### Corgi · Member of Technical Staff · Sep to Oct 2026 · London
+
+Part of the core Atlas engineering team, working with sales. Corgi sells insurance to startups, and its sales teams each ran their own CRM. Several teams would work the same broker, every one claimed the deal at close, and credit and commission got settled by argument. I sat next to the sales reps in the London office and worked out with them and the engineers how ownership should be decided.
+
+- Led the build of one shared, AI-enabled CRM that records every call, email and meeting from every team, so ownership is visible while the deal is still open. **20+ sales teams, 200+ people** use it.
+- AI agents on Claude and OpenAI read each interaction, match it to the right broker, client and deal, and work out attribution. **2,000+ emails a day**, tuned for cost and latency with batching, caching and cheaper-model routing.
+- Merged four HubSpot portals into one workspace and removed **12,000+ duplicate records**.
+- Built an OAuth-secured MCP server on Atlas so AI hosts such as Claude can quote, read and bind insurance through the same pricing engine and audit trail as the portal.
+
+### Huddle01 · Founding Engineer · Jun 2024 to Jul 2026
+
+**Terminal, backend and infrastructure.** A realtime Solana trading and token-discovery product. New tokens appear faster than anyone can read them, so the job was to surface the ones with live momentum and show trades with almost no delay. I owned the infrastructure and the indexer behind it. We were two backend engineers and built it in under three months by leaning hard on AI agents.
 
 ```text
 pump.fun / PumpSwap events
@@ -28,49 +48,27 @@ token ranking and realtime broadcasts
 WebSockets → Next.js charts, trades, and discovery UI
 ```
 
-### Backend architecture and reliability
+- **1M+ events a day**, with peaks around **500 to 600 events a second**.
+- Replaced a monolithic event server that couldn't keep up with independent services and Bun workers, so database writes, broadcasts and ranking stopped blocking ingestion.
+- Synchronous parsing and enrichment stay under **7 ms at p95**. Token ranking finishes under about **400 ms at p95** and refreshes roughly every 500 ms.
+- Cut the time for critical trading data to appear in the Next.js app from about **15 seconds to about 200 ms**: missing indexes, query fixes, no sequential fetch waterfalls, caching, and a split between eager and deferred data.
+- Idempotent processing, duplicate protection, replay and backfill, heartbeats and alerts. About **99% uptime**, and incidents recovered in roughly 30 to 45 minutes.
+- Packaged the architecture, debugging playbooks and replay scripts as repo-level skills, so Codex, OpenCode and Claude Code could pick up each other's work and cross-check changes.
 
-- Processed **more than one million events per day**, including peaks of approximately **500–600 events per second**.
-- Replaced a failure-prone monolithic event server with independently scalable services and workers, separating parsing, persistence, broadcasting, and ranking so expensive workloads could not block the ingestion path.
-- Used PostgreSQL indexes and partitioning for high-write operational data, ClickHouse for analytical workloads, and Redis/in-memory caching to avoid repeated cold reads and recomputation.
-- Built duplicate-event protection, idempotent processing, backfill and replay workflows, service heartbeats, structured logging, Axiom monitoring, Slack alerts, and escalation paths for production incidents.
-- Kept token-ranking computation under approximately **400 ms p95** with ranked results refreshed roughly every **500 ms**, helping the product react to live market activity rather than stale snapshots.
-- Stabilized the platform around approximately **99% uptime** and handled incident recovery, generally within approximately **30–45 minutes** depending on the failure.
+**Huddle01 Meet, mobile and payments.** A WebRTC video conferencing app for the web3 community. I started on the mobile app and ended up leading three engineers, while staying hands-on across web, backend and payments.
 
-### Frontend and product delivery
+- Meet reached **100,000+ downloads** across Android and iOS.
+- Took crash-free sessions from roughly 60 to 70% up to about 99.99%, and cut Android app boot time from about 30 seconds to about 200 ms.
+- Built payments end to end: Apple in-app purchases on iOS and Stripe on Android, with webhooks, receipt validation, idempotency and retry handling.
+- Migrated the app to React Native's New Architecture, wrote native modules in Kotlin and Swift for audio, and maintained the React RTC SDK.
 
-The system work continued into the Next.js product. I removed sequential data-fetching waterfalls, optimized expensive queries, added missing indexes and caching, separated eager from deferred data, and chose SSR or CSR based on freshness and interaction requirements. The resulting interface streamed live trades, token updates, market statistics, charts, and ranking changes over WebSockets.
+### Nintee · Senior Software Engineer I · Sep 2023 to Apr 2024
 
-I also implemented full-stack mobile payments for Huddle01 Meet: Apple in-app purchases, Stripe payments on Android, backend webhooks, receipt validation, idempotency, purchase confirmation, retry handling, and duplicate-event protection.
+One of the first three engineers at an AI app for building better habits and wellbeing. I led mobile and worked directly with a founder, from the first codebase to the Android and iOS launch. Built the React Native and Expo app and its design system, shipped chat and feeds on Stream, and prototyped early agent features: RAG, tool calling and generative UI. These were product-direction prototypes, not production-scale inference.
 
-## Applied AI and agentic systems
+### GeekyAnts · Software Engineer I · 2021 to Sep 2023
 
-### Agentic product prototypes at Nintee
-
-At Nintee, I personally built core foundations for early **RAG, tool-calling, generative UI, and text-to-action prototypes**. The work covered source ingestion, vector retrieval, context construction, prompting, response generation, and agents that could invoke actions instead of returning only text. Generative UI experiments converted model output into predefined interactive interface blocks. These were product-direction prototypes—not claims of model training, AI research, or production-scale inference.
-
-### Engineering with coding agents
-
-For Terminal’s two-engineer backend effort, I turned ad hoc AI usage into a repeatable engineering system. I created repository-level skills containing architecture, service ownership, conventions, debugging procedures, validation rules, and known failure scenarios. The same context worked across Codex, OpenCode, Claude Code, and compatible CLI agents.
-
-Persistent task and change records captured what changed, why it changed, remaining work, validation results, and architectural decisions. Deterministic transaction-replay scripts let agents reproduce failures, compare expected and actual output, validate fixes, and cross-review another agent’s implementation without rebuilding the system context every time.
-
-### Selected agentic projects
-
-- **[Audit Reliability Lab](https://github.com/ponikar/elm-eval)** — Evaluates supplier-audit agents with human-verified cases, deterministic recall/precision/citation metrics, failure traces, regression tests, and quality gates without relying on an LLM judge.
-- **[Phone for AI Agent](https://github.com/ponikar/phone-for-ai-agent)** — Gives an agent a real Android device through AccessibilityService and a constrained WebSocket protocol for reading the UI tree, tapping, swiping, typing, and navigation.
-- **[React Native Cactus POC](https://github.com/ponikar/react-native-cactus-poc)** — Explores on-device inference, PDF ingestion, embeddings, local retrieval, memory, and tool calls.
-- **[GitFix](https://github.com/ponikar/gitfix)** — Mobile GitHub workflow for inspecting repositories, generating reviewed multi-file changes, and raising pull requests.
-
-## Advanced mobile engineering
-
-Led delivery of Huddle01 Meet across Android and iOS, reaching **100,000+ combined downloads**. Migrated the production application to React Native New Architecture; built Kotlin and Swift native modules, native audio integrations, Picture-in-Picture, and Objective-C/Metal video-processing work; and owned CodePush plus GitHub Actions/Fastlane release automation. I also investigated production crashes and startup bottlenecks without reducing that work to unsupported performance claims.
-
-## Experience
-
-- **Huddle01 — Founding Engineer** · Jun 2024–Jul 2026 — Full-stack product ownership, realtime infrastructure, mobile leadership, payments, releases, and production reliability.
-- **Nintee — Senior Software Engineer I** · Sep 2023–Apr 2024 — Shipped an initial React Native/Expo product, built Next.js prototypes, reusable UI foundations, and early agentic product systems.
-- **GeekyAnts — Software Engineer I** · 2021–Sep 2023 — Delivered production React Native, React, and TypeScript applications for fintech and consumer clients.
+React Native, React and TypeScript apps for fintech and consumer clients, working directly with each client on what they needed.
 
 ## Writing
 
